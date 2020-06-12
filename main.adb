@@ -1,6 +1,3 @@
--- Umut Cem Soyulmaz - 989654
--- Zhaolin Deng - 984027
--- Savan Kanabar - 965371
 -----------------------------------------------------------------------------------------------------------------
 -- The Unlock operation can only ever be performed when the password manager is in the Locked state.
 -----------------------------------------------------------------------------------------------------------------
