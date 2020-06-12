@@ -1,0 +1,32 @@
+V "GNAT Lib v2019"
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U pin%b			pin.adb			0c5e1d96 NE OO PK IU
+Z system.exp_int%s	s-expint.adb		s-expint.ali
+
+U pin%s			pin.ads			553c8633 EE NE OO PK IU
+
+D pin.ads		20200605092453 553c8633 pin%s
+D pin.adb		20200605092453 59629ba5 pin%b
+D system.ads		20190518041255 085b6ffb system%s
+D s-expint.ads		20190518041256 192336fc system.exp_int%s
+G a e
+G c Z s b [from_string pin 5 13 none]
+X 1 pin.ads
+1K9*PIN 11E9 13l5 13e8 2|1b14 23l5 23t8
+3I9*PIN<integer> 5r47 11c9 2|3r47 18r14
+5V13*From_String{3I9} 5>25 2|3b13 19l8 19t19
+5a25 S{string} 6r14 7r30 7r41 7r57 2|3b25 7r16 9r31 12r74
+7i25 I{integer} 7r43 7r59
+X 2 pin.adb
+4i7 Result{natural} 12r102 14m13 14r23 15m13 15r23 18r18
+5i7 Count{natural} 12r64 12r86 12r117 13m13 13r22
+7i11 I{integer} 9r33 12r72
+9e13 Ch{character} 12r36 12r50 15r47
+

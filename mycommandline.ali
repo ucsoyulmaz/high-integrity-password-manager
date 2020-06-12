@@ -1,0 +1,36 @@
+V "GNAT Lib v2019"
+P ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV SPARK_05
+
+U mycommandline%b	mycommandline.adb	8ba6725a NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+
+U mycommandline%s	mycommandline.ads	dbf720e9 EE NE OO PK
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-comlin.ads		20190518041255 4aa66568 ada.command_line%s
+D mycommandline.ads	20200605092453 dbf720e9 mycommandline%s
+D mycommandline.adb	20200605092453 1af737db mycommandline%b
+D system.ads		20190518041255 085b6ffb system%s
+G a e
+G c Z s b [argument_count mycommandline 3 13 none]
+G c Z s b [command_name mycommandline 5 13 none]
+G c Z s b [argument mycommandline 7 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 4|1r6 9r14 14r14 19r14
+X 2 a-comlin.ads
+36K13*Command_Line 144e21 4|1w10 9r18 14r18 19r18
+39V13*Argument_Count{natural} 4|14s31
+52V13*Argument{string} 4|19s31
+62V13*Command_Name{string} 4|9s31
+X 3 mycommandline.ads
+1K9*MyCommandLine 10l5 10e18 4|3b14 24l5 24t18
+3V13*Argument_Count{natural} 8s23 4|12b13 15l8 15t22
+5V13*Command_Name{string} 4|7b13 10l8 10t20
+7V13*Argument{string} 7>22 4|17b13 20l8 20t16
+7i22 Number{positive} 8r13 4|17b22 19r40
+

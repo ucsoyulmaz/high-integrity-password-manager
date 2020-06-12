@@ -1,0 +1,57 @@
+{
+  "spark": [
+    {
+      "name": "NumericValue",
+      "sloc": [
+        {
+          "file": "numericvalue.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "NumericValue.CheckPIN",
+      "sloc": [
+        {
+          "file": "numericvalue.ads",
+          "line": 3
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "NumericValue.CheckPIN",
+          "sloc": [
+            {
+              "file": "numericvalue.ads",
+              "line": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 2.16999993426725E-04,
+    "globals (basic)": 1.80999995791353E-04,
+    "globals/properties (advanced)": 3.30999988364056E-04,
+    "flow analysis": 1.79200002457947E-03,
+    "codepeer results": 7.00000009601354E-06,
+    "init_why_sections": 5.82000007852912E-04,
+    "translation of standard": 3.23999999091029E-03,
+    "translation of compilation unit": 1.27300003077835E-03,
+    "proof": 9.99999997475243E-07
+  }
+}

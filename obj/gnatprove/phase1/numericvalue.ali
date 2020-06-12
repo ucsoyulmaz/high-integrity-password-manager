@@ -1,0 +1,38 @@
+V "GNAT Lib v2019"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U numericvalue%b	numericvalue.adb	fc8d1e41 OO PK
+
+U numericvalue%s	numericvalue.ads	dc4defdd OO PK
+
+D numericvalue.ads	20200605053839 dc4defdd numericvalue%s
+D numericvalue.adb	20200605064937 20c0f19c numericvalue%b
+D system.ads		20190518041255 085b6ffb system%s
+G a Z
+X 1 numericvalue.ads
+1K9*NumericValue 5l5 5e17 2|1b14 24l5 24t17
+3V13*CheckPIN{boolean} 3>23 2|4b13 23l8 23t16
+3a23 PinValue{string} 2|4b23 9r19 11r34
+X 2 numericvalue.adb
+7b10 IsPinValid{boolean} 14m19 16m19 21r17
+9i14 I{integer} 11r44
+11e16 Ch{character} 13r35 15r60
+
+QQ SPARKVERSION 2019 (20190517)
+GG EK_DIRECT_CALLS numericvalue__checkpin 0
+GG EK_GLOBALS numericvalue__checkpin local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS numericvalue 0
+GG EK_GLOBALS numericvalue local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE numericvalue TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE numericvalue__checkpin FALSE FALSE FALSE FALSE TRUE numericvalue VISIBLE_PART
+GG EK_END_MARKER

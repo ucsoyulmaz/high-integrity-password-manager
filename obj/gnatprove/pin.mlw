@@ -1,0 +1,3094 @@
+(* Module for axiomatizing type "short_short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_short_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type short_short_integer =
+  < range -128 127 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -128) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (127 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = short_short_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_short_integer__ref =
+  { mutable short_short_integer__content : short_short_integer }
+ 
+ function short_short_integer__ref_short_short_integer__content__projection 
+   (a : short_short_integer__ref) : short_short_integer =
+  a.short_short_integer__content
+ 
+ meta "model_projection" function short_short_integer__ref_short_short_integer__content__projection
+ 
+ meta "inline:no" function short_short_integer__ref_short_short_integer__content__projection
+ 
+ val short_short_integer__havoc 
+   (x : short_short_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_short_integer__rep
+ use        Standard__short_short_integer as Standard__short_short_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__short_short_integer.short_short_integer) : int =
+  (Standard__short_short_integer.short_short_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__short_short_integer.short_short_integer, 
+ predicate in_range = Standard__short_short_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type short_integer =
+  < range -32768 32767 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -32768) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (32767 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = short_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_integer__ref =
+  { mutable short_integer__content : short_integer }
+ 
+ function short_integer__ref_short_integer__content__projection 
+   (a : short_integer__ref) : short_integer =
+  a.short_integer__content
+ 
+ meta "model_projection" function short_integer__ref_short_integer__content__projection
+ 
+ meta "inline:no" function short_integer__ref_short_integer__content__projection
+ 
+ val short_integer__havoc 
+   (x : short_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_integer__rep
+ use        Standard__short_integer as Standard__short_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__short_integer.short_integer) : int =
+  (Standard__short_integer.short_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__short_integer.short_integer, 
+ predicate in_range = Standard__short_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type integer =
+  < range -2147483648 2147483647 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -2147483648) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (2147483647 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer__ref =
+  { mutable integer__content : integer }
+ 
+ function integer__ref_integer__content__projection 
+   (a : integer__ref) : integer =
+  a.integer__content
+ 
+ meta "model_projection" function integer__ref_integer__content__projection
+ 
+ meta "inline:no" function integer__ref_integer__content__projection
+ 
+ val integer__havoc 
+   (x : integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer__rep
+ use        Standard__integer as Standard__integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__integer.integer) : int =
+  (Standard__integer.integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__integer.integer, 
+ predicate in_range = Standard__integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type long_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -9223372036854775808) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (9223372036854775807 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = long_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_integer__ref =
+  { mutable long_integer__content : long_integer }
+ 
+ function long_integer__ref_long_integer__content__projection 
+   (a : long_integer__ref) : long_integer =
+  a.long_integer__content
+ 
+ meta "model_projection" function long_integer__ref_long_integer__content__projection
+ 
+ meta "inline:no" function long_integer__ref_long_integer__content__projection
+ 
+ val long_integer__havoc 
+   (x : long_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_integer__rep
+ use        Standard__long_integer as Standard__long_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__long_integer.long_integer) : int =
+  (Standard__long_integer.long_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__long_integer.long_integer, 
+ predicate in_range = Standard__long_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_long_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type long_long_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -9223372036854775808) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (9223372036854775807 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = long_long_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_long_integer__ref =
+  { mutable long_long_integer__content : long_long_integer }
+ 
+ function long_long_integer__ref_long_long_integer__content__projection 
+   (a : long_long_integer__ref) : long_long_integer =
+  a.long_long_integer__content
+ 
+ meta "model_projection" function long_long_integer__ref_long_long_integer__content__projection
+ 
+ meta "inline:no" function long_long_integer__ref_long_long_integer__content__projection
+ 
+ val long_long_integer__havoc 
+   (x : long_long_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_long_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_long_integer__rep
+ use        Standard__long_long_integer as Standard__long_long_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__long_long_integer.long_long_integer) : int =
+  (Standard__long_long_integer.long_long_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__long_long_integer.long_long_integer, 
+ predicate in_range = Standard__long_long_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "natural", created in Gnat2Why.Types.Translate_Type *)
+module Standard__natural
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type natural =
+  < range 0 2147483647 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (0 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (2147483647 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = natural, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type natural__ref =
+  { mutable natural__content : natural }
+ 
+ function natural__ref_natural__content__projection 
+   (a : natural__ref) : natural =
+  a.natural__content
+ 
+ meta "model_projection" function natural__ref_natural__content__projection
+ 
+ meta "inline:no" function natural__ref_natural__content__projection
+ 
+ val natural__havoc 
+   (x : natural__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "natural", created in Gnat2Why.Types.Translate_Type *)
+module Standard__natural__rep
+ use        Standard__natural as Standard__natural
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__natural.natural) : int =
+  (Standard__natural.natural'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__natural.natural, 
+ predicate in_range = Standard__natural.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "positive", created in Gnat2Why.Types.Translate_Type *)
+module Standard__positive
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type positive =
+  < range 1 2147483647 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (1 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (2147483647 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = positive, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type positive__ref =
+  { mutable positive__content : positive }
+ 
+ function positive__ref_positive__content__projection 
+   (a : positive__ref) : positive =
+  a.positive__content
+ 
+ meta "model_projection" function positive__ref_positive__content__projection
+ 
+ meta "inline:no" function positive__ref_positive__content__projection
+ 
+ val positive__havoc 
+   (x : positive__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "positive", created in Gnat2Why.Types.Translate_Type *)
+module Standard__positive__rep
+ use        Standard__positive as Standard__positive
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__positive.positive) : int =
+  (Standard__positive.positive'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__positive.positive, 
+ predicate in_range = Standard__positive.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "short_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_float
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "_gnatprove_standard".Float32 as Float32
+
+ type short_float 
+ 
+ val constant first 
+   : Float32.t
+  ensures { result =  (Float32.neg (340282346638528859811704183484516925440.0:Float32.t)) }
+ 
+ val constant last 
+   : Float32.t
+  ensures { result =  (340282346638528859811704183484516925440.0:Float32.t) }
+ 
+ predicate in_range 
+   (x : Float32.t) =
+  (Float32.t'isFinite x)
+ val in_range 
+   (x : Float32.t) : bool
+  ensures { result <-> in_range (x : Float32.t) }
+ 
+ clone export "ada__model".Static_Float32 with axiom .,
+ type t = short_float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type short_float__ref =
+  { mutable short_float__content : short_float }
+ 
+ function short_float__ref_short_float__content__projection 
+   (a : short_float__ref) : short_float =
+  a.short_float__content
+ 
+ meta "model_projection" function short_float__ref_short_float__content__projection
+ 
+ meta "inline:no" function short_float__ref_short_float__content__projection
+ 
+ val short_float__havoc 
+   (x : short_float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "short_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__short_float__rep
+ use        Standard__short_float as Standard__short_float
+ use        "_gnatprove_standard".Float32 as Float32
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ clone export "ada__model".Rep_Proj_Float32 with axiom .,
+ type t = Standard__short_float.short_float, 
+ predicate in_range = Standard__short_float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__float
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "_gnatprove_standard".Float32 as Float32
+
+ type float__ 
+ 
+ val constant first 
+   : Float32.t
+  ensures { result =  (Float32.neg (340282346638528859811704183484516925440.0:Float32.t)) }
+ 
+ val constant last 
+   : Float32.t
+  ensures { result =  (340282346638528859811704183484516925440.0:Float32.t) }
+ 
+ predicate in_range 
+   (x : Float32.t) =
+  (Float32.t'isFinite x)
+ val in_range 
+   (x : Float32.t) : bool
+  ensures { result <-> in_range (x : Float32.t) }
+ 
+ clone export "ada__model".Static_Float32 with axiom .,
+ type t = float__, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type float____ref =
+  { mutable float____content : float__ }
+ 
+ function float____ref_float____content__projection 
+   (a : float____ref) : float__ =
+  a.float____content
+ 
+ meta "model_projection" function float____ref_float____content__projection
+ 
+ meta "inline:no" function float____ref_float____content__projection
+ 
+ val float____havoc 
+   (x : float____ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__float__rep
+ use        Standard__float as Standard__float
+ use        "_gnatprove_standard".Float32 as Float32
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ clone export "ada__model".Rep_Proj_Float32 with axiom .,
+ type t = Standard__float.float__, 
+ predicate in_range = Standard__float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "long_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_float
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "_gnatprove_standard".Float64 as Float64
+
+ type long_float 
+ 
+ val constant first 
+   : Float64.t
+  ensures { result =  (Float64.neg (179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.0:Float64.t)) }
+ 
+ val constant last 
+   : Float64.t
+  ensures { result =  (179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.0:Float64.t) }
+ 
+ predicate in_range 
+   (x : Float64.t) =
+  (Float64.t'isFinite x)
+ val in_range 
+   (x : Float64.t) : bool
+  ensures { result <-> in_range (x : Float64.t) }
+ 
+ clone export "ada__model".Static_Float64 with axiom .,
+ type t = long_float, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type long_float__ref =
+  { mutable long_float__content : long_float }
+ 
+ function long_float__ref_long_float__content__projection 
+   (a : long_float__ref) : long_float =
+  a.long_float__content
+ 
+ meta "model_projection" function long_float__ref_long_float__content__projection
+ 
+ meta "inline:no" function long_float__ref_long_float__content__projection
+ 
+ val long_float__havoc 
+   (x : long_float__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "long_float", created in Gnat2Why.Types.Translate_Type *)
+module Standard__long_float__rep
+ use        Standard__long_float as Standard__long_float
+ use        "_gnatprove_standard".Float64 as Float64
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ clone export "ada__model".Rep_Proj_Float64 with axiom .,
+ type t = Standard__long_float.long_float, 
+ predicate in_range = Standard__long_float.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__character
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type character 
+ 
+ val constant first 
+   : int
+  ensures { result =  (0 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (255 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type character__ref =
+  { mutable character__content : character }
+ 
+ function character__ref_character__content__projection 
+   (a : character__ref) : character =
+  a.character__content
+ 
+ meta "model_projection" function character__ref_character__content__projection
+ 
+ meta "inline:no" function character__ref_character__content__projection
+ 
+ val character__havoc 
+   (x : character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__character__rep
+ use        Standard__character as Standard__character
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__character.character, 
+ predicate in_range = Standard__character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_character
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type wide_character 
+ 
+ val constant first 
+   : int
+  ensures { result =  (0 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (65535 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = wide_character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type wide_character__ref =
+  { mutable wide_character__content : wide_character }
+ 
+ function wide_character__ref_wide_character__content__projection 
+   (a : wide_character__ref) : wide_character =
+  a.wide_character__content
+ 
+ meta "model_projection" function wide_character__ref_wide_character__content__projection
+ 
+ meta "inline:no" function wide_character__ref_wide_character__content__projection
+ 
+ val wide_character__havoc 
+   (x : wide_character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_character__rep
+ use        Standard__wide_character as Standard__wide_character
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__wide_character.wide_character, 
+ predicate in_range = Standard__wide_character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "wide_wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_character
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type wide_wide_character 
+ 
+ val constant first 
+   : int
+  ensures { result =  (0 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (2147483647 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = wide_wide_character, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type wide_wide_character__ref =
+  { mutable wide_wide_character__content : wide_wide_character }
+ 
+ function wide_wide_character__ref_wide_wide_character__content__projection 
+   (a : wide_wide_character__ref) : wide_wide_character =
+  a.wide_wide_character__content
+ 
+ meta "model_projection" function wide_wide_character__ref_wide_wide_character__content__projection
+ 
+ meta "inline:no" function wide_wide_character__ref_wide_wide_character__content__projection
+ 
+ val wide_wide_character__havoc 
+   (x : wide_wide_character__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "wide_wide_character", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_character__rep
+ use        Standard__wide_wide_character as Standard__wide_wide_character
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__wide_wide_character.wide_wide_character, 
+ predicate in_range = Standard__wide_wide_character.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing the array theory associated to type "string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__character
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__character as Standard__character
+ use        Standard__character__rep as Standard__character__rep
+
+ function index_I1_one 
+   : int =
+  (1 : int)
+ 
+ type component_type =
+  Standard__character.character
+ 
+ clone export "_gnatprove_standard".Array__1 with axiom .,
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_91   : int.
+   (if (( (a__first <= temp___idx_91) /\ (temp___idx_91 <= a__last) )) then (
+    ((Standard__character__rep.to_rep (get a temp___idx_91)) = (Standard__character__rep.to_rep (get b ((b__first - a__first) + temp___idx_91))))) else true)) )
+ val bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool
+  ensures { result = bool_eq (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) }
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_91   : int.
+    (if (( (a__first <= temp___idx_91) /\ (temp___idx_91 <= a__last) )) then (
+     ((Standard__character__rep.to_rep (get a temp___idx_91)) = (Standard__character__rep.to_rep (get b ((b__first - a__first) + temp___idx_91))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__character__Concat
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+
+ function index_Index_one 
+   : int =
+  (1 : int)
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with axiom .,
+ type component_type = Array__Int__Standard__character.component_type, 
+ type map = Array__Int__Standard__character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__character_Comp
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__character__rep as Standard__character__rep
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+
+ function index_Index_one 
+   : int =
+  (1 : int)
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with axiom .,
+ type component_type = Array__Int__Standard__character.component_type, 
+ function to_rep = Standard__character__rep.to_rep, 
+ type map = Array__Int__Standard__character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__character.get, 
+ function bool_eq = Array__Int__Standard__character.bool_eq
+
+end
+
+(* Module for axiomatizing type "string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__string
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer as Standard__integer
+ use        Standard__positive as Standard__positive
+ use        Standard__character as Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Standard__integer__rep as Standard__integer__rep
+
+ type component_type =
+  Standard__character.character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with axiom .,
+ type map = Array__Int__Standard__character.map, 
+ function array_bool_eq = Array__Int__Standard__character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline:no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline:no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline:no" function last
+ 
+ type string__ref =
+  { mutable string__content : string }
+ 
+ function string__ref_string__content__projection 
+   (a : string__ref) : string =
+  a.string__content
+ 
+ meta "model_projection" function string__ref_string__content__projection
+ 
+ meta "inline:no" function string__ref_string__content__projection
+ 
+ val string__havoc 
+   (x : string__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_string/of_string functions, created in Gnat2Why.Types.Translate_Type *)
+module Standard_String__Img
+ use        "int".Int
+ use        Standard__string as Standard__string
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val function to_string 
+   (x : Main.__image) (s : int) : Standard__string.string
+ 
+ val function from_string 
+   (x : Standard__string.string) : Main.__image
+ 
+ axiom to_string__first :
+  (forall x   : Main.__image.
+  (forall s   : int [(to_string x s)].
+   ((Standard__string.first (to_string x s)) = (1 : int))))
+ 
+ axiom to_string__length :
+  (forall x   : Main.__image.
+  (forall s   : int [(to_string x s)].
+   ( (s >= (0 : int)) -> ((Standard__string.length (to_string x s)) <= s) )))
+
+end
+
+(* Module for axiomatizing the array theory associated to type "wide_string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__wide_character
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__wide_character as Standard__wide_character
+ use        Standard__wide_character__rep as Standard__wide_character__rep
+
+ function index_I1_one 
+   : int =
+  (1 : int)
+ 
+ type component_type =
+  Standard__wide_character.wide_character
+ 
+ clone export "_gnatprove_standard".Array__1 with axiom .,
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_98   : int.
+   (if (( (a__first <= temp___idx_98) /\ (temp___idx_98 <= a__last) )) then (
+    ((Standard__wide_character__rep.to_rep (get a temp___idx_98)) = (Standard__wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_98))))) else true)) )
+ val bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool
+  ensures { result = bool_eq (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) }
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_98   : int.
+    (if (( (a__first <= temp___idx_98) /\ (temp___idx_98 <= a__last) )) then (
+     ((Standard__wide_character__rep.to_rep (get a temp___idx_98)) = (Standard__wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_98))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "wide_string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__wide_character__Concat
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Array__Int__Standard__wide_character as Array__Int__Standard__wide_character
+
+ function index_Index_one 
+   : int =
+  (1 : int)
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with axiom .,
+ type component_type = Array__Int__Standard__wide_character.component_type, 
+ type map = Array__Int__Standard__wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "wide_string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__wide_character_Comp
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__wide_character__rep as Standard__wide_character__rep
+ use        Array__Int__Standard__wide_character as Array__Int__Standard__wide_character
+
+ function index_Index_one 
+   : int =
+  (1 : int)
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with axiom .,
+ type component_type = Array__Int__Standard__wide_character.component_type, 
+ function to_rep = Standard__wide_character__rep.to_rep, 
+ type map = Array__Int__Standard__wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_character.get, 
+ function bool_eq = Array__Int__Standard__wide_character.bool_eq
+
+end
+
+(* Module for axiomatizing type "wide_string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_string
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer as Standard__integer
+ use        Standard__positive as Standard__positive
+ use        Standard__wide_character as Standard__wide_character
+ use        Standard__integer__rep as Standard__integer__rep
+ use        Array__Int__Standard__wide_character as Array__Int__Standard__wide_character
+
+ type component_type =
+  Standard__wide_character.wide_character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with axiom .,
+ type map = Array__Int__Standard__wide_character.map, 
+ function array_bool_eq = Array__Int__Standard__wide_character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type wide_string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline:no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline:no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline:no" function last
+ 
+ type wide_string__ref =
+  { mutable wide_string__content : wide_string }
+ 
+ function wide_string__ref_wide_string__content__projection 
+   (a : wide_string__ref) : wide_string =
+  a.wide_string__content
+ 
+ meta "model_projection" function wide_string__ref_wide_string__content__projection
+ 
+ meta "inline:no" function wide_string__ref_wide_string__content__projection
+ 
+ val wide_string__havoc 
+   (x : wide_string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Create_Rep_Array_Theory *)
+module Array__Int__Standard__wide_wide_character
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__wide_wide_character as Standard__wide_wide_character
+ use        Standard__wide_wide_character__rep as Standard__wide_wide_character__rep
+
+ function index_I1_one 
+   : int =
+  (1 : int)
+ 
+ type component_type =
+  Standard__wide_wide_character.wide_wide_character
+ 
+ clone export "_gnatprove_standard".Array__1 with axiom .,
+ type I1.t = int, 
+ predicate I1.le = Int.(<=), 
+ predicate I1.lt = Int.(<), 
+ predicate I1.gt = Int.(>), 
+ function I1.add = Int.(+), 
+ function I1.sub = Int.(-), 
+ function I1.one = index_I1_one, 
+ type component_type = component_type
+ 
+ function bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool =
+  ( (if ((a__first <= a__last)) then (
+   ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+   (b__first > b__last))) /\ (forall temp___idx_105   : int.
+   (if (( (a__first <= temp___idx_105) /\ (temp___idx_105 <= a__last) )) then (
+    ((Standard__wide_wide_character__rep.to_rep (get a temp___idx_105)) = (Standard__wide_wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_105))))) else true)) )
+ val bool_eq 
+   (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) : bool
+  ensures { result = bool_eq (a : map) (a__first : int) (a__last : int) (b : map) (b__first : int) (b__last : int) }
+ 
+ axiom bool_eq_rev :
+  (forall a   b   : map.
+  (forall a__first   a__last   b__first   b__last   : int.
+   ( ((bool_eq b b__first b__last a a__first a__last) = True) -> ( (if ((a__first <= a__last)) then (
+    ( (b__first <= b__last) /\ ((a__last - a__first) = (b__last - b__first)) )) else (
+    (b__first > b__last))) /\ (forall temp___idx_105   : int.
+    (if (( (a__first <= temp___idx_105) /\ (temp___idx_105 <= a__last) )) then (
+     ((Standard__wide_wide_character__rep.to_rep (get a temp___idx_105)) = (Standard__wide_wide_character__rep.to_rep (get b ((b__first - a__first) + temp___idx_105))))) else true)) ) )))
+
+end
+
+(* Module for axiomatizing concatenation for the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Declare_Concatenation_Symbols *)
+module Array__Int__Standard__wide_wide_character__Concat
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Array__Int__Standard__wide_wide_character as Array__Int__Standard__wide_wide_character
+
+ function index_Index_one 
+   : int =
+  (1 : int)
+ 
+ clone export "_gnatprove_standard".Array__1__Concat with axiom .,
+ type component_type = Array__Int__Standard__wide_wide_character.component_type, 
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_wide_character.get
+
+end
+
+(* Module for axiomatizing comparison for the array theory associated to type "wide_wide_string", created in Why.Gen.Arrays.Declare_Comparison_Symbols *)
+module Array__Int__Standard__wide_wide_character_Comp
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__wide_wide_character__rep as Standard__wide_wide_character__rep
+ use        Array__Int__Standard__wide_wide_character as Array__Int__Standard__wide_wide_character
+
+ function index_Index_one 
+   : int =
+  (1 : int)
+ 
+ clone export "ada__model".Array_Int_Rep_Comparison_Axiom with axiom .,
+ type component_type = Array__Int__Standard__wide_wide_character.component_type, 
+ function to_rep = Standard__wide_wide_character__rep.to_rep, 
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ type Index.t = int, 
+ predicate Index.le = Int.(<=), 
+ predicate Index.lt = Int.(<), 
+ predicate Index.gt = Int.(>), 
+ function Index.add = Int.(+), 
+ function Index.sub = Int.(-), 
+ function Index.one = index_Index_one, 
+ function get = Array__Int__Standard__wide_wide_character.get, 
+ function bool_eq = Array__Int__Standard__wide_wide_character.bool_eq
+
+end
+
+(* Module for axiomatizing type "wide_wide_string", created in Gnat2Why.Types.Translate_Type *)
+module Standard__wide_wide_string
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer as Standard__integer
+ use        Standard__positive as Standard__positive
+ use        Standard__wide_wide_character as Standard__wide_wide_character
+ use        Standard__integer__rep as Standard__integer__rep
+ use        Array__Int__Standard__wide_wide_character as Array__Int__Standard__wide_wide_character
+
+ type component_type =
+  Standard__wide_wide_character.wide_wide_character
+ 
+ function index_1_id 
+   (x : int) : int =
+  x
+ 
+ clone export "ada__model".Unconstr_Array with axiom .,
+ type map = Array__Int__Standard__wide_wide_character.map, 
+ function array_bool_eq = Array__Int__Standard__wide_wide_character.bool_eq, 
+ type index_base_type = Standard__integer.integer, 
+ type index_rep_type = int, 
+ function to_rep = Standard__integer__rep.to_rep, 
+ function rep_to_int = index_1_id, 
+ predicate in_range_base = Standard__integer.in_range, 
+ predicate index_dynamic_property = Standard__positive.dynamic_property, 
+ predicate index_rep_le = Int.(<=)
+ 
+ type wide_wide_string =
+  __t
+ 
+ meta "model_projection" function to_array
+ 
+ meta "inline:no" function to_array
+ 
+ meta "model_projection" function first
+ 
+ meta "inline:no" function first
+ 
+ meta "model_projection" function last
+ 
+ meta "inline:no" function last
+ 
+ type wide_wide_string__ref =
+  { mutable wide_wide_string__content : wide_wide_string }
+ 
+ function wide_wide_string__ref_wide_wide_string__content__projection 
+   (a : wide_wide_string__ref) : wide_wide_string =
+  a.wide_wide_string__content
+ 
+ meta "model_projection" function wide_wide_string__ref_wide_wide_string__content__projection
+ 
+ meta "inline:no" function wide_wide_string__ref_wide_wide_string__content__projection
+ 
+ val wide_wide_string__havoc 
+   (x : wide_wide_string__ref) : unit
+  writes {x}
+
+end
+
+(* Module for fixed-point operation for type at system.ads:1, created in Why.Gen.Scalars.Create_Fixed_Point_Theory_If_Needed *)
+module Fixed_Point__1_1000000000
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ function num_small 
+   : int =
+  (1 : int)
+ 
+ function den_small 
+   : int =
+  (1000000000 : int)
+ 
+ clone export "ada__model".Fixed_Point_Rep with axiom .,
+ function num_small = num_small, 
+ function den_small = den_small
+
+end
+
+(* Module for axiomatizing type "duration", created in Gnat2Why.Types.Translate_Type *)
+module Standard__duration
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        "_gnatprove_standard".Main as Main
+
+ type duration 
+ 
+ val constant num_small 
+   : Main.__fixed
+  ensures { result =  (1 : int) }
+ 
+ val constant den_small 
+   : Main.__fixed
+  ensures { result =  (1000000000 : int) }
+ 
+ val constant first 
+   : Main.__fixed
+  ensures { result =  ( ( -9223372036854775808 ) : int ) }
+ 
+ val constant last 
+   : Main.__fixed
+  ensures { result =  ( 9223372036854775807 : int ) }
+ 
+ predicate in_range 
+   (x : Main.__fixed) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : Main.__fixed) : bool
+  ensures { result <-> in_range (x : Main.__fixed) }
+ 
+ clone export "ada__model".Static_Fixed_Point with axiom .,
+ type t = duration, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type duration__ref =
+  { mutable duration__content : duration }
+ 
+ function duration__ref_duration__content__projection 
+   (a : duration__ref) : duration =
+  a.duration__content
+ 
+ meta "model_projection" function duration__ref_duration__content__projection
+ 
+ meta "inline:no" function duration__ref_duration__content__projection
+ 
+ val duration__havoc 
+   (x : duration__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "duration", created in Gnat2Why.Types.Translate_Type *)
+module Standard__duration__rep
+ use        Standard__duration as Standard__duration
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ clone export "ada__model".Rep_Proj_Fixed with axiom .,
+ type t = Standard__duration.duration, 
+ predicate in_range = Standard__duration.in_range
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_8", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_8
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type integer_8 =
+  < range -128 127 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -128) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (127 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = integer_8, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_8__ref =
+  { mutable integer_8__content : integer_8 }
+ 
+ function integer_8__ref_integer_8__content__projection 
+   (a : integer_8__ref) : integer_8 =
+  a.integer_8__content
+ 
+ meta "model_projection" function integer_8__ref_integer_8__content__projection
+ 
+ meta "inline:no" function integer_8__ref_integer_8__content__projection
+ 
+ val integer_8__havoc 
+   (x : integer_8__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_8", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_8__rep
+ use        Standard__integer_8 as Standard__integer_8
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__integer_8.integer_8) : int =
+  (Standard__integer_8.integer_8'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__integer_8.integer_8, 
+ predicate in_range = Standard__integer_8.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_16", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_16
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type integer_16 =
+  < range -32768 32767 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -32768) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (32767 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = integer_16, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_16__ref =
+  { mutable integer_16__content : integer_16 }
+ 
+ function integer_16__ref_integer_16__content__projection 
+   (a : integer_16__ref) : integer_16 =
+  a.integer_16__content
+ 
+ meta "model_projection" function integer_16__ref_integer_16__content__projection
+ 
+ meta "inline:no" function integer_16__ref_integer_16__content__projection
+ 
+ val integer_16__havoc 
+   (x : integer_16__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_16", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_16__rep
+ use        Standard__integer_16 as Standard__integer_16
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__integer_16.integer_16) : int =
+  (Standard__integer_16.integer_16'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__integer_16.integer_16, 
+ predicate in_range = Standard__integer_16.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_32", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_32
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type integer_32 =
+  < range -2147483648 2147483647 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -2147483648) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (2147483647 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = integer_32, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_32__ref =
+  { mutable integer_32__content : integer_32 }
+ 
+ function integer_32__ref_integer_32__content__projection 
+   (a : integer_32__ref) : integer_32 =
+  a.integer_32__content
+ 
+ meta "model_projection" function integer_32__ref_integer_32__content__projection
+ 
+ meta "inline:no" function integer_32__ref_integer_32__content__projection
+ 
+ val integer_32__havoc 
+   (x : integer_32__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_32", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_32__rep
+ use        Standard__integer_32 as Standard__integer_32
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__integer_32.integer_32) : int =
+  (Standard__integer_32.integer_32'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__integer_32.integer_32, 
+ predicate in_range = Standard__integer_32.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "integer_64", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_64
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type integer_64 =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -9223372036854775808) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (9223372036854775807 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = integer_64, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type integer_64__ref =
+  { mutable integer_64__content : integer_64 }
+ 
+ function integer_64__ref_integer_64__content__projection 
+   (a : integer_64__ref) : integer_64 =
+  a.integer_64__content
+ 
+ meta "model_projection" function integer_64__ref_integer_64__content__projection
+ 
+ meta "inline:no" function integer_64__ref_integer_64__content__projection
+ 
+ val integer_64__havoc 
+   (x : integer_64__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "integer_64", created in Gnat2Why.Types.Translate_Type *)
+module Standard__integer_64__rep
+ use        Standard__integer_64 as Standard__integer_64
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__integer_64.integer_64) : int =
+  (Standard__integer_64.integer_64'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__integer_64.integer_64, 
+ predicate in_range = Standard__integer_64.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "universal_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__universal_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type universal_integer =
+  < range -9223372036854775808 9223372036854775807 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -9223372036854775808) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (9223372036854775807 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = universal_integer, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type universal_integer__ref =
+  { mutable universal_integer__content : universal_integer }
+ 
+ function universal_integer__ref_universal_integer__content__projection 
+   (a : universal_integer__ref) : universal_integer =
+  a.universal_integer__content
+ 
+ meta "model_projection" function universal_integer__ref_universal_integer__content__projection
+ 
+ meta "inline:no" function universal_integer__ref_universal_integer__content__projection
+ 
+ val universal_integer__havoc 
+   (x : universal_integer__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "universal_integer", created in Gnat2Why.Types.Translate_Type *)
+module Standard__universal_integer__rep
+ use        Standard__universal_integer as Standard__universal_integer
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Standard__universal_integer.universal_integer) : int =
+  (Standard__universal_integer.universal_integer'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Standard__universal_integer.universal_integer, 
+ predicate in_range = Standard__universal_integer.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "TpinB" defined at pin.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Pin__TpinB
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type tpinB =
+  < range -2147483648 2147483647 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (( -2147483648) : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (2147483647 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = tpinB, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type tpinB__ref =
+  { mutable tpinB__content : tpinB }
+ 
+ function tpinB__ref_tpinB__content__projection 
+   (a : tpinB__ref) : tpinB =
+  a.tpinB__content
+ 
+ meta "model_projection" function tpinB__ref_tpinB__content__projection
+ 
+ meta "inline:no" function tpinB__ref_tpinB__content__projection
+ 
+ val tpinB__havoc 
+   (x : tpinB__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "TpinB" defined at pin.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Pin__TpinB__rep
+ use        Pin__TpinB as Pin__TpinB
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Pin__TpinB.tpinB) : int =
+  (Pin__TpinB.tpinB'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Pin__TpinB.tpinB, 
+ predicate in_range = Pin__TpinB.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for axiomatizing type "pin" defined at pin.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Pin__pin
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+
+ type pin =
+  < range 0 9999 >
+ 
+ val constant first 
+   : int
+  ensures { result =  (0 : int) }
+ 
+ val constant last 
+   : int
+  ensures { result =  (9999 : int) }
+ 
+ predicate in_range 
+   (x : int) =
+  ( (first <= x) /\ (x <= last) )
+ val in_range 
+   (x : int) : bool
+  ensures { result <-> in_range (x : int) }
+ 
+ clone export "ada__model".Static_Discrete with axiom .,
+ type t = pin, 
+ function first = first, 
+ function last = last, 
+ predicate in_range = in_range
+ 
+ type pin__ref =
+  { mutable pin__content : pin }
+ 
+ function pin__ref_pin__content__projection 
+   (a : pin__ref) : pin =
+  a.pin__content
+ 
+ meta "model_projection" function pin__ref_pin__content__projection
+ 
+ meta "inline:no" function pin__ref_pin__content__projection
+ 
+ val pin__havoc 
+   (x : pin__ref) : unit
+  writes {x}
+
+end
+
+(* Module defining to_rep/of_rep for type "pin" defined at pin.ads:11, created in Gnat2Why.Types.Translate_Type *)
+module Pin__pin__rep
+ use        Pin__pin as Pin__pin
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ function to_rep 
+   (x : Pin__pin.pin) : int =
+  (Pin__pin.pin'int x)
+ 
+ clone export "ada__model".Rep_Proj_Int with axiom .,
+ type t = Pin__pin.pin, 
+ predicate in_range = Pin__pin.in_range, 
+ function to_rep = to_rep
+ 
+ meta "model_projection" function to_rep
+ 
+ meta "inline:no" function to_rep
+
+end
+
+(* Module for defining the constant "s" defined at pin.ads:5, created in Gnat2Why.Decls.Translate_Constant *)
+module Pin__from_string__s
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Standard__string as Standard__string
+
+ val constant s [#"pin.ads" 5 0 0][@model_trace:2487] [@model_projected] [@name:S] 
+   : Standard__string.string
+
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "s" defined at pin.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pin__from_string__s___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for axiomatizing type "T3s" defined at pin.ads:7, created in Gnat2Why.Types.Translate_Type *)
+module Pin__from_string__L2s__T3s
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer as Standard__integer
+ use        Standard__integer__rep as Standard__integer__rep
+
+ type t3s =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int) =
+  ( (first_int <= x) /\ (x <= last_int) )
+ val dynamic_property 
+   (first_int : int) (last_int : int) (x : int) : bool
+  ensures { result <-> dynamic_property (first_int : int) (last_int : int) (x : int) }
+ 
+ clone export "ada__model".Dynamic_Discrete with axiom .,
+ type t = t3s, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t3s__ref =
+  { mutable t3s__content : t3s }
+ 
+ function t3s__ref_t3s__content__projection 
+   (a : t3s__ref) : t3s =
+  a.t3s__content
+ 
+ meta "model_projection" function t3s__ref_t3s__content__projection
+ 
+ meta "inline:no" function t3s__ref_t3s__content__projection
+ 
+ val t3s__havoc 
+   (x : t3s__ref) : unit
+  writes {x}
+
+end
+
+(* Module for possibly declaring a logic function for "from_string" defined at pin.ads:5, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Pin__from_string
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Standard__string as Standard__string
+
+ val function from_string 
+   (s : Standard__string.string) : int
+ 
+ val predicate from_string__function_guard 
+   (temp___result_154 : int) (s : Standard__string.string)
+
+end
+
+(* Module for axiomatizing type "TS1bP1" defined at pin.adb:3, created in Gnat2Why.Types.Translate_Type *)
+module Pin__from_string__TS1bP1
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer as Standard__integer
+ use        Standard__integer__rep as Standard__integer__rep
+
+ type tS1bP1 =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int) =
+  ( (first_int <= x) /\ (x <= last_int) )
+ val dynamic_property 
+   (first_int : int) (last_int : int) (x : int) : bool
+  ensures { result <-> dynamic_property (first_int : int) (last_int : int) (x : int) }
+ 
+ clone export "ada__model".Dynamic_Discrete with axiom .,
+ type t = tS1bP1, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type tS1bP1__ref =
+  { mutable tS1bP1__content : tS1bP1 }
+ 
+ function tS1bP1__ref_tS1bP1__content__projection 
+   (a : tS1bP1__ref) : tS1bP1 =
+  a.tS1bP1__content
+ 
+ meta "model_projection" function tS1bP1__ref_tS1bP1__content__projection
+ 
+ meta "inline:no" function tS1bP1__ref_tS1bP1__content__projection
+ 
+ val tS1bP1__havoc 
+   (x : tS1bP1__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "S1b" defined at pin.adb:3, created in Gnat2Why.Types.Translate_Type *)
+module Pin__from_string__S1b
+ use export Standard__string
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ type s1b =
+  string
+ 
+ type s1b__ref =
+  { mutable s1b__content : s1b }
+ 
+ function s1b__ref_s1b__content__projection 
+   (a : s1b__ref) : s1b =
+  a.s1b__content
+ 
+ meta "model_projection" function s1b__ref_s1b__content__projection
+ 
+ meta "inline:no" function s1b__ref_s1b__content__projection
+ 
+ val s1b__havoc 
+   (x : s1b__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "T2b" defined at pin.adb:7, created in Gnat2Why.Types.Translate_Type *)
+module Pin__from_string__L_1__T2b
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer as Standard__integer
+ use        Standard__integer__rep as Standard__integer__rep
+
+ type t2b =
+  Standard__integer.integer
+ 
+ predicate dynamic_property 
+   (first_int : int) (last_int : int) (x : int) =
+  ( (first_int <= x) /\ (x <= last_int) )
+ val dynamic_property 
+   (first_int : int) (last_int : int) (x : int) : bool
+  ensures { result <-> dynamic_property (first_int : int) (last_int : int) (x : int) }
+ 
+ clone export "ada__model".Dynamic_Discrete with axiom .,
+ type t = t2b, 
+ type rep_type = int, 
+ function base_to_rep = Standard__integer__rep.to_rep, 
+ function base_of_rep = Standard__integer__rep.of_rep, 
+ predicate dynamic_property = dynamic_property
+ 
+ type t2b__ref =
+  { mutable t2b__content : t2b }
+ 
+ function t2b__ref_t2b__content__projection 
+   (a : t2b__ref) : t2b =
+  a.t2b__content
+ 
+ meta "model_projection" function t2b__ref_t2b__content__projection
+ 
+ meta "inline:no" function t2b__ref_t2b__content__projection
+ 
+ val t2b__havoc 
+   (x : t2b__ref) : unit
+  writes {x}
+
+end
+(* Module for defining a ref holding the value of variable "result" defined at pin.adb:4, created in Gnat2Why.Decls.Translate_Variable *)
+module Pin__from_string__result
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val result__ [#"pin.adb" 4 0 0][@model_trace:2326] [@model_projected] [@name:Result]  : int__ref 
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "result" defined at pin.adb:4, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pin__from_string__result___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for defining a ref holding the value of variable "count" defined at pin.adb:5, created in Gnat2Why.Decls.Translate_Variable *)
+module Pin__from_string__count
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val count [#"pin.adb" 5 0 0][@model_projected] [@name:Count] [@model_trace:2336]  : int__ref 
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "count" defined at pin.adb:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pin__from_string__count___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for defining a ref holding the value of variable "i" defined at pin.adb:7, created in Gnat2Why.Decls.Translate_Variable *)
+module Pin__from_string__L_1__i
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val i [#"pin.adb" 7 0 0][@model_projected] [@name:I] [@model_trace:2349]  : int__ref 
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "i" defined at pin.adb:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pin__from_string__L_1__i___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module for defining a ref holding the value of variable "ch" defined at pin.adb:9, created in Gnat2Why.Decls.Translate_Variable *)
+module Pin__from_string__B_2__ch
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ val ch [#"pin.adb" 9 0 0][@model_trace:2364] [@model_projected] [@name:Ch]  : int__ref 
+ 
+ val constant attr__ATTRIBUTE_ADDRESS 
+   : int
+
+
+end
+
+(* Module giving an empty axiom for the entity "ch" defined at pin.adb:9, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pin__from_string__B_2__ch___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+(* Module giving axioms for type "short_short_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_short_integer___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__short_short_integer as Standard__short_short_integer
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_4 : int) (temp___is_init_0 : bool) (temp___skip_constant_1 : bool) (temp___do_toplevel_2 : bool) (temp___do_typ_inv_3 : bool) =
+  (if (( temp___is_init_0 \/ (Standard__short_short_integer.first <= Standard__short_short_integer.last) )) then (
+   (Standard__short_short_integer.dynamic_property Standard__short_short_integer.first Standard__short_short_integer.last temp___expr_4)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_4 : int) (temp___is_init_0 : bool) (temp___skip_constant_1 : bool) (temp___do_toplevel_2 : bool) (temp___do_typ_inv_3 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_4 : int) (temp___is_init_0 : bool) (temp___skip_constant_1 : bool) (temp___do_toplevel_2 : bool) (temp___do_typ_inv_3 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_5 : int) (temp___skip_top_level_6 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_5 : int) (temp___skip_top_level_6 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_5 : int) (temp___skip_top_level_6 : bool) }
+
+end
+
+(* Module giving axioms for type "short_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_integer___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__short_integer as Standard__short_integer
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_11 : int) (temp___is_init_7 : bool) (temp___skip_constant_8 : bool) (temp___do_toplevel_9 : bool) (temp___do_typ_inv_10 : bool) =
+  (if (( temp___is_init_7 \/ (Standard__short_integer.first <= Standard__short_integer.last) )) then (
+   (Standard__short_integer.dynamic_property Standard__short_integer.first Standard__short_integer.last temp___expr_11)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_11 : int) (temp___is_init_7 : bool) (temp___skip_constant_8 : bool) (temp___do_toplevel_9 : bool) (temp___do_typ_inv_10 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_11 : int) (temp___is_init_7 : bool) (temp___skip_constant_8 : bool) (temp___do_toplevel_9 : bool) (temp___do_typ_inv_10 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_12 : int) (temp___skip_top_level_13 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_12 : int) (temp___skip_top_level_13 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_12 : int) (temp___skip_top_level_13 : bool) }
+
+end
+
+(* Module giving axioms for type "integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer as Standard__integer
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_18 : int) (temp___is_init_14 : bool) (temp___skip_constant_15 : bool) (temp___do_toplevel_16 : bool) (temp___do_typ_inv_17 : bool) =
+  (if (( temp___is_init_14 \/ (Standard__integer.first <= Standard__integer.last) )) then (
+   (Standard__integer.dynamic_property Standard__integer.first Standard__integer.last temp___expr_18)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_18 : int) (temp___is_init_14 : bool) (temp___skip_constant_15 : bool) (temp___do_toplevel_16 : bool) (temp___do_typ_inv_17 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_18 : int) (temp___is_init_14 : bool) (temp___skip_constant_15 : bool) (temp___do_toplevel_16 : bool) (temp___do_typ_inv_17 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_19 : int) (temp___skip_top_level_20 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_19 : int) (temp___skip_top_level_20 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_19 : int) (temp___skip_top_level_20 : bool) }
+
+end
+
+(* Module giving axioms for type "long_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_integer___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__long_integer as Standard__long_integer
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_25 : int) (temp___is_init_21 : bool) (temp___skip_constant_22 : bool) (temp___do_toplevel_23 : bool) (temp___do_typ_inv_24 : bool) =
+  (if (( temp___is_init_21 \/ (Standard__long_integer.first <= Standard__long_integer.last) )) then (
+   (Standard__long_integer.dynamic_property Standard__long_integer.first Standard__long_integer.last temp___expr_25)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_25 : int) (temp___is_init_21 : bool) (temp___skip_constant_22 : bool) (temp___do_toplevel_23 : bool) (temp___do_typ_inv_24 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_25 : int) (temp___is_init_21 : bool) (temp___skip_constant_22 : bool) (temp___do_toplevel_23 : bool) (temp___do_typ_inv_24 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_26 : int) (temp___skip_top_level_27 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_26 : int) (temp___skip_top_level_27 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_26 : int) (temp___skip_top_level_27 : bool) }
+
+end
+
+(* Module giving axioms for type "long_long_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_long_integer___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__long_long_integer as Standard__long_long_integer
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_32 : int) (temp___is_init_28 : bool) (temp___skip_constant_29 : bool) (temp___do_toplevel_30 : bool) (temp___do_typ_inv_31 : bool) =
+  (if (( temp___is_init_28 \/ (Standard__long_long_integer.first <= Standard__long_long_integer.last) )) then (
+   (Standard__long_long_integer.dynamic_property Standard__long_long_integer.first Standard__long_long_integer.last temp___expr_32)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_32 : int) (temp___is_init_28 : bool) (temp___skip_constant_29 : bool) (temp___do_toplevel_30 : bool) (temp___do_typ_inv_31 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_32 : int) (temp___is_init_28 : bool) (temp___skip_constant_29 : bool) (temp___do_toplevel_30 : bool) (temp___do_typ_inv_31 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_33 : int) (temp___skip_top_level_34 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_33 : int) (temp___skip_top_level_34 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_33 : int) (temp___skip_top_level_34 : bool) }
+
+end
+
+(* Module giving axioms for type "natural", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__natural___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__natural as Standard__natural
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_39 : int) (temp___is_init_35 : bool) (temp___skip_constant_36 : bool) (temp___do_toplevel_37 : bool) (temp___do_typ_inv_38 : bool) =
+  (if (( temp___is_init_35 \/ (Standard__natural.first <= Standard__natural.last) )) then (
+   (Standard__natural.dynamic_property Standard__natural.first Standard__natural.last temp___expr_39)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_39 : int) (temp___is_init_35 : bool) (temp___skip_constant_36 : bool) (temp___do_toplevel_37 : bool) (temp___do_typ_inv_38 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_39 : int) (temp___is_init_35 : bool) (temp___skip_constant_36 : bool) (temp___do_toplevel_37 : bool) (temp___do_typ_inv_38 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_40 : int) (temp___skip_top_level_41 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_40 : int) (temp___skip_top_level_41 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_40 : int) (temp___skip_top_level_41 : bool) }
+
+end
+
+(* Module giving axioms for type "positive", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__positive___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__positive as Standard__positive
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_46 : int) (temp___is_init_42 : bool) (temp___skip_constant_43 : bool) (temp___do_toplevel_44 : bool) (temp___do_typ_inv_45 : bool) =
+  (if (( temp___is_init_42 \/ (Standard__positive.first <= Standard__positive.last) )) then (
+   (Standard__positive.dynamic_property Standard__positive.first Standard__positive.last temp___expr_46)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_46 : int) (temp___is_init_42 : bool) (temp___skip_constant_43 : bool) (temp___do_toplevel_44 : bool) (temp___do_typ_inv_45 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_46 : int) (temp___is_init_42 : bool) (temp___skip_constant_43 : bool) (temp___do_toplevel_44 : bool) (temp___do_typ_inv_45 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_47 : int) (temp___skip_top_level_48 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_47 : int) (temp___skip_top_level_48 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_47 : int) (temp___skip_top_level_48 : bool) }
+
+end
+
+(* Module giving axioms for type "short_float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__short_float___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "_gnatprove_standard".Float32 as Float32
+ use        Standard__short_float as Standard__short_float
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_53 : Float32.t) (temp___is_init_49 : bool) (temp___skip_constant_50 : bool) (temp___do_toplevel_51 : bool) (temp___do_typ_inv_52 : bool) =
+  (if (( temp___is_init_49 \/ (Float32.le Standard__short_float.first Standard__short_float.last) )) then (
+   (Standard__short_float.dynamic_property Standard__short_float.first Standard__short_float.last temp___expr_53)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_53 : Float32.t) (temp___is_init_49 : bool) (temp___skip_constant_50 : bool) (temp___do_toplevel_51 : bool) (temp___do_typ_inv_52 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_53 : Float32.t) (temp___is_init_49 : bool) (temp___skip_constant_50 : bool) (temp___do_toplevel_51 : bool) (temp___do_typ_inv_52 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_54 : Float32.t) (temp___skip_top_level_55 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_54 : Float32.t) (temp___skip_top_level_55 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_54 : Float32.t) (temp___skip_top_level_55 : bool) }
+
+end
+
+(* Module giving axioms for type "float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__float___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "_gnatprove_standard".Float32 as Float32
+ use        Standard__float as Standard__float
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_60 : Float32.t) (temp___is_init_56 : bool) (temp___skip_constant_57 : bool) (temp___do_toplevel_58 : bool) (temp___do_typ_inv_59 : bool) =
+  (if (( temp___is_init_56 \/ (Float32.le Standard__float.first Standard__float.last) )) then (
+   (Standard__float.dynamic_property Standard__float.first Standard__float.last temp___expr_60)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_60 : Float32.t) (temp___is_init_56 : bool) (temp___skip_constant_57 : bool) (temp___do_toplevel_58 : bool) (temp___do_typ_inv_59 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_60 : Float32.t) (temp___is_init_56 : bool) (temp___skip_constant_57 : bool) (temp___do_toplevel_58 : bool) (temp___do_typ_inv_59 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_61 : Float32.t) (temp___skip_top_level_62 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_61 : Float32.t) (temp___skip_top_level_62 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_61 : Float32.t) (temp___skip_top_level_62 : bool) }
+
+end
+
+(* Module giving axioms for type "long_float", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__long_float___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "_gnatprove_standard".Float64 as Float64
+ use        Standard__long_float as Standard__long_float
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_67 : Float64.t) (temp___is_init_63 : bool) (temp___skip_constant_64 : bool) (temp___do_toplevel_65 : bool) (temp___do_typ_inv_66 : bool) =
+  (if (( temp___is_init_63 \/ (Float64.le Standard__long_float.first Standard__long_float.last) )) then (
+   (Standard__long_float.dynamic_property Standard__long_float.first Standard__long_float.last temp___expr_67)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_67 : Float64.t) (temp___is_init_63 : bool) (temp___skip_constant_64 : bool) (temp___do_toplevel_65 : bool) (temp___do_typ_inv_66 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_67 : Float64.t) (temp___is_init_63 : bool) (temp___skip_constant_64 : bool) (temp___do_toplevel_65 : bool) (temp___do_typ_inv_66 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_68 : Float64.t) (temp___skip_top_level_69 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_68 : Float64.t) (temp___skip_top_level_69 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_68 : Float64.t) (temp___skip_top_level_69 : bool) }
+
+end
+
+(* Module giving axioms for type "character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__character___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__character as Standard__character
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_74 : int) (temp___is_init_70 : bool) (temp___skip_constant_71 : bool) (temp___do_toplevel_72 : bool) (temp___do_typ_inv_73 : bool) =
+  (if (( temp___is_init_70 \/ (Standard__character.first <= Standard__character.last) )) then (
+   (Standard__character.dynamic_property Standard__character.first Standard__character.last temp___expr_74)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_74 : int) (temp___is_init_70 : bool) (temp___skip_constant_71 : bool) (temp___do_toplevel_72 : bool) (temp___do_typ_inv_73 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_74 : int) (temp___is_init_70 : bool) (temp___skip_constant_71 : bool) (temp___do_toplevel_72 : bool) (temp___do_typ_inv_73 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_75 : int) (temp___skip_top_level_76 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_75 : int) (temp___skip_top_level_76 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_75 : int) (temp___skip_top_level_76 : bool) }
+
+end
+
+(* Module giving axioms for type "wide_character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_character___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__wide_character as Standard__wide_character
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_81 : int) (temp___is_init_77 : bool) (temp___skip_constant_78 : bool) (temp___do_toplevel_79 : bool) (temp___do_typ_inv_80 : bool) =
+  (if (( temp___is_init_77 \/ (Standard__wide_character.first <= Standard__wide_character.last) )) then (
+   (Standard__wide_character.dynamic_property Standard__wide_character.first Standard__wide_character.last temp___expr_81)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_81 : int) (temp___is_init_77 : bool) (temp___skip_constant_78 : bool) (temp___do_toplevel_79 : bool) (temp___do_typ_inv_80 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_81 : int) (temp___is_init_77 : bool) (temp___skip_constant_78 : bool) (temp___do_toplevel_79 : bool) (temp___do_typ_inv_80 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_82 : int) (temp___skip_top_level_83 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_82 : int) (temp___skip_top_level_83 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_82 : int) (temp___skip_top_level_83 : bool) }
+
+end
+
+(* Module giving axioms for type "wide_wide_character", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_wide_character___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__wide_wide_character as Standard__wide_wide_character
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_88 : int) (temp___is_init_84 : bool) (temp___skip_constant_85 : bool) (temp___do_toplevel_86 : bool) (temp___do_typ_inv_87 : bool) =
+  (if (( temp___is_init_84 \/ (Standard__wide_wide_character.first <= Standard__wide_wide_character.last) )) then (
+   (Standard__wide_wide_character.dynamic_property Standard__wide_wide_character.first Standard__wide_wide_character.last temp___expr_88)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_88 : int) (temp___is_init_84 : bool) (temp___skip_constant_85 : bool) (temp___do_toplevel_86 : bool) (temp___do_typ_inv_87 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_88 : int) (temp___is_init_84 : bool) (temp___skip_constant_85 : bool) (temp___do_toplevel_86 : bool) (temp___do_typ_inv_87 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_89 : int) (temp___skip_top_level_90 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_89 : int) (temp___skip_top_level_90 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_89 : int) (temp___skip_top_level_90 : bool) }
+
+end
+
+(* Module giving axioms for type "string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__string___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Standard__positive as Standard__positive
+ use        Standard__string as Standard__string
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_96 : Standard__string.string) (temp___is_init_92 : bool) (temp___skip_constant_93 : bool) (temp___do_toplevel_94 : bool) (temp___do_typ_inv_95 : bool) =
+  (if (temp___skip_constant_93) then (
+   true) else (
+   (Standard__string.dynamic_property Standard__positive.first Standard__positive.last (Standard__string.first temp___expr_96) (Standard__string.last temp___expr_96))))
+ val dynamic_invariant [@inline] 
+   (temp___expr_96 : Standard__string.string) (temp___is_init_92 : bool) (temp___skip_constant_93 : bool) (temp___do_toplevel_94 : bool) (temp___do_typ_inv_95 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_96 : Standard__string.string) (temp___is_init_92 : bool) (temp___skip_constant_93 : bool) (temp___do_toplevel_94 : bool) (temp___do_typ_inv_95 : bool) }
+
+end
+
+(* Module giving axioms for type "wide_string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_string___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Standard__positive as Standard__positive
+ use        Standard__wide_string as Standard__wide_string
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_103 : Standard__wide_string.wide_string) (temp___is_init_99 : bool) (temp___skip_constant_100 : bool) (temp___do_toplevel_101 : bool) (temp___do_typ_inv_102 : bool) =
+  (if (temp___skip_constant_100) then (
+   true) else (
+   (Standard__wide_string.dynamic_property Standard__positive.first Standard__positive.last (Standard__wide_string.first temp___expr_103) (Standard__wide_string.last temp___expr_103))))
+ val dynamic_invariant [@inline] 
+   (temp___expr_103 : Standard__wide_string.wide_string) (temp___is_init_99 : bool) (temp___skip_constant_100 : bool) (temp___do_toplevel_101 : bool) (temp___do_typ_inv_102 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_103 : Standard__wide_string.wide_string) (temp___is_init_99 : bool) (temp___skip_constant_100 : bool) (temp___do_toplevel_101 : bool) (temp___do_typ_inv_102 : bool) }
+
+end
+
+(* Module giving axioms for type "wide_wide_string", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__wide_wide_string___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Standard__positive as Standard__positive
+ use        Standard__wide_wide_string as Standard__wide_wide_string
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_110 : Standard__wide_wide_string.wide_wide_string) (temp___is_init_106 : bool) (temp___skip_constant_107 : bool) (temp___do_toplevel_108 : bool) (temp___do_typ_inv_109 : bool) =
+  (if (temp___skip_constant_107) then (
+   true) else (
+   (Standard__wide_wide_string.dynamic_property Standard__positive.first Standard__positive.last (Standard__wide_wide_string.first temp___expr_110) (Standard__wide_wide_string.last temp___expr_110))))
+ val dynamic_invariant [@inline] 
+   (temp___expr_110 : Standard__wide_wide_string.wide_wide_string) (temp___is_init_106 : bool) (temp___skip_constant_107 : bool) (temp___do_toplevel_108 : bool) (temp___do_typ_inv_109 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_110 : Standard__wide_wide_string.wide_wide_string) (temp___is_init_106 : bool) (temp___skip_constant_107 : bool) (temp___do_toplevel_108 : bool) (temp___do_typ_inv_109 : bool) }
+
+end
+
+(* Module giving axioms for type "duration", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__duration___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        "_gnatprove_standard".Main as Main
+ use        Standard__duration as Standard__duration
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_116 : Main.__fixed) (temp___is_init_112 : bool) (temp___skip_constant_113 : bool) (temp___do_toplevel_114 : bool) (temp___do_typ_inv_115 : bool) =
+  (if (( temp___is_init_112 \/ (Standard__duration.first <= Standard__duration.last) )) then (
+   (Standard__duration.dynamic_property Standard__duration.first Standard__duration.last temp___expr_116)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_116 : Main.__fixed) (temp___is_init_112 : bool) (temp___skip_constant_113 : bool) (temp___do_toplevel_114 : bool) (temp___do_typ_inv_115 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_116 : Main.__fixed) (temp___is_init_112 : bool) (temp___skip_constant_113 : bool) (temp___do_toplevel_114 : bool) (temp___do_typ_inv_115 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_117 : Main.__fixed) (temp___skip_top_level_118 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_117 : Main.__fixed) (temp___skip_top_level_118 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_117 : Main.__fixed) (temp___skip_top_level_118 : bool) }
+
+end
+
+(* Module giving axioms for type "integer_8", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_8___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer_8 as Standard__integer_8
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_123 : int) (temp___is_init_119 : bool) (temp___skip_constant_120 : bool) (temp___do_toplevel_121 : bool) (temp___do_typ_inv_122 : bool) =
+  (if (( temp___is_init_119 \/ (Standard__integer_8.first <= Standard__integer_8.last) )) then (
+   (Standard__integer_8.dynamic_property Standard__integer_8.first Standard__integer_8.last temp___expr_123)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_123 : int) (temp___is_init_119 : bool) (temp___skip_constant_120 : bool) (temp___do_toplevel_121 : bool) (temp___do_typ_inv_122 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_123 : int) (temp___is_init_119 : bool) (temp___skip_constant_120 : bool) (temp___do_toplevel_121 : bool) (temp___do_typ_inv_122 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_124 : int) (temp___skip_top_level_125 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_124 : int) (temp___skip_top_level_125 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_124 : int) (temp___skip_top_level_125 : bool) }
+
+end
+
+(* Module giving axioms for type "integer_16", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_16___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer_16 as Standard__integer_16
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_130 : int) (temp___is_init_126 : bool) (temp___skip_constant_127 : bool) (temp___do_toplevel_128 : bool) (temp___do_typ_inv_129 : bool) =
+  (if (( temp___is_init_126 \/ (Standard__integer_16.first <= Standard__integer_16.last) )) then (
+   (Standard__integer_16.dynamic_property Standard__integer_16.first Standard__integer_16.last temp___expr_130)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_130 : int) (temp___is_init_126 : bool) (temp___skip_constant_127 : bool) (temp___do_toplevel_128 : bool) (temp___do_typ_inv_129 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_130 : int) (temp___is_init_126 : bool) (temp___skip_constant_127 : bool) (temp___do_toplevel_128 : bool) (temp___do_typ_inv_129 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_131 : int) (temp___skip_top_level_132 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_131 : int) (temp___skip_top_level_132 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_131 : int) (temp___skip_top_level_132 : bool) }
+
+end
+
+(* Module giving axioms for type "integer_32", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_32___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer_32 as Standard__integer_32
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_137 : int) (temp___is_init_133 : bool) (temp___skip_constant_134 : bool) (temp___do_toplevel_135 : bool) (temp___do_typ_inv_136 : bool) =
+  (if (( temp___is_init_133 \/ (Standard__integer_32.first <= Standard__integer_32.last) )) then (
+   (Standard__integer_32.dynamic_property Standard__integer_32.first Standard__integer_32.last temp___expr_137)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_137 : int) (temp___is_init_133 : bool) (temp___skip_constant_134 : bool) (temp___do_toplevel_135 : bool) (temp___do_typ_inv_136 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_137 : int) (temp___is_init_133 : bool) (temp___skip_constant_134 : bool) (temp___do_toplevel_135 : bool) (temp___do_typ_inv_136 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_138 : int) (temp___skip_top_level_139 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_138 : int) (temp___skip_top_level_139 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_138 : int) (temp___skip_top_level_139 : bool) }
+
+end
+
+(* Module giving axioms for type "integer_64", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__integer_64___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__integer_64 as Standard__integer_64
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_144 : int) (temp___is_init_140 : bool) (temp___skip_constant_141 : bool) (temp___do_toplevel_142 : bool) (temp___do_typ_inv_143 : bool) =
+  (if (( temp___is_init_140 \/ (Standard__integer_64.first <= Standard__integer_64.last) )) then (
+   (Standard__integer_64.dynamic_property Standard__integer_64.first Standard__integer_64.last temp___expr_144)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_144 : int) (temp___is_init_140 : bool) (temp___skip_constant_141 : bool) (temp___do_toplevel_142 : bool) (temp___do_typ_inv_143 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_144 : int) (temp___is_init_140 : bool) (temp___skip_constant_141 : bool) (temp___do_toplevel_142 : bool) (temp___do_typ_inv_143 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_145 : int) (temp___skip_top_level_146 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_145 : int) (temp___skip_top_level_146 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_145 : int) (temp___skip_top_level_146 : bool) }
+
+end
+
+(* Module giving axioms for type "universal_integer", created in Gnat2Why.Types.Generate_Type_Completion *)
+module Standard__universal_integer___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__universal_integer as Standard__universal_integer
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_151 : int) (temp___is_init_147 : bool) (temp___skip_constant_148 : bool) (temp___do_toplevel_149 : bool) (temp___do_typ_inv_150 : bool) =
+  (if (( temp___is_init_147 \/ (Standard__universal_integer.first <= Standard__universal_integer.last) )) then (
+   (Standard__universal_integer.dynamic_property Standard__universal_integer.first Standard__universal_integer.last temp___expr_151)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_151 : int) (temp___is_init_147 : bool) (temp___skip_constant_148 : bool) (temp___do_toplevel_149 : bool) (temp___do_typ_inv_150 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_151 : int) (temp___is_init_147 : bool) (temp___skip_constant_148 : bool) (temp___do_toplevel_149 : bool) (temp___do_typ_inv_150 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_152 : int) (temp___skip_top_level_153 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_152 : int) (temp___skip_top_level_153 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_152 : int) (temp___skip_top_level_153 : bool) }
+
+end
+
+(* Module for defining the loop exit exception for the loop "L_1" defined at pin.adb:7, created in Gnat2Why.Decls.Translate_Loop_Entity *)
+module Pin__from_string__L_1
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ exception L_1
+
+end
+
+(* Module giving an empty axiom for the entity "L_1" defined at pin.adb:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pin__from_string__L_1___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "TpinB" defined at pin.ads:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pin__TpinB___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "pin" defined at pin.ads:11, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pin__pin___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Pin__pin as Pin__pin
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_159 : int) (temp___is_init_155 : bool) (temp___skip_constant_156 : bool) (temp___do_toplevel_157 : bool) (temp___do_typ_inv_158 : bool) =
+  (if (( temp___is_init_155 \/ (Pin__pin.first <= Pin__pin.last) )) then (
+   (Pin__pin.dynamic_property Pin__pin.first Pin__pin.last temp___expr_159)) else true)
+ val dynamic_invariant [@inline] 
+   (temp___expr_159 : int) (temp___is_init_155 : bool) (temp___skip_constant_156 : bool) (temp___do_toplevel_157 : bool) (temp___do_typ_inv_158 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_159 : int) (temp___is_init_155 : bool) (temp___skip_constant_156 : bool) (temp___do_toplevel_157 : bool) (temp___do_typ_inv_158 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_160 : int) (temp___skip_top_level_161 : bool) =
+  true
+ val default_initial_assumption [@inline] 
+   (temp___expr_160 : int) (temp___skip_top_level_161 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_160 : int) (temp___skip_top_level_161 : bool) }
+
+end
+
+(* Module giving axioms for type "T3s" defined at pin.ads:7, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pin__from_string__L2s__T3s___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "TS1bP1" defined at pin.adb:3, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pin__from_string__TS1bP1___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+
+(* Module giving axioms for type "S1b" defined at pin.adb:3, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pin__from_string__S1b___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        Standard__string as Standard__string
+ use        Pin__from_string__s as Pin__from_string__s
+ use        Pin__from_string__S1b as Pin__from_string__S1b
+
+ predicate dynamic_invariant [@inline] 
+   (temp___expr_168 : Pin__from_string__S1b.s1b) (temp___is_init_164 : bool) (temp___skip_constant_165 : bool) (temp___do_toplevel_166 : bool) (temp___do_typ_inv_167 : bool) =
+  (if (temp___skip_constant_165) then (
+   true) else (
+   ( (Pin__from_string__S1b.dynamic_property (Standard__string.first Pin__from_string__s.s) (Standard__string.last Pin__from_string__s.s) (Pin__from_string__S1b.first temp___expr_168) (Pin__from_string__S1b.last temp___expr_168)) /\ ( ((Pin__from_string__S1b.first temp___expr_168) = (Standard__string.first Pin__from_string__s.s)) /\ ((Pin__from_string__S1b.last temp___expr_168) = (Standard__string.last Pin__from_string__s.s)) ) )))
+ val dynamic_invariant [@inline] 
+   (temp___expr_168 : Pin__from_string__S1b.s1b) (temp___is_init_164 : bool) (temp___skip_constant_165 : bool) (temp___do_toplevel_166 : bool) (temp___do_typ_inv_167 : bool) : bool
+  ensures { result <-> dynamic_invariant (temp___expr_168 : Pin__from_string__S1b.s1b) (temp___is_init_164 : bool) (temp___skip_constant_165 : bool) (temp___do_toplevel_166 : bool) (temp___do_typ_inv_167 : bool) }
+ 
+ predicate default_initial_assumption [@inline] 
+   (temp___expr_170 : Pin__from_string__S1b.s1b) (temp___skip_top_level_171 : bool) =
+  ( ( true /\ ((Pin__from_string__S1b.first temp___expr_170) = (Standard__string.first Pin__from_string__s.s)) )/\((Pin__from_string__S1b.last temp___expr_170) = (Standard__string.last Pin__from_string__s.s)) )
+ val default_initial_assumption [@inline] 
+   (temp___expr_170 : Pin__from_string__S1b.s1b) (temp___skip_top_level_171 : bool) : bool
+  ensures { result <-> default_initial_assumption (temp___expr_170 : Pin__from_string__S1b.s1b) (temp___skip_top_level_171 : bool) }
+
+end
+
+(* Module giving axioms for type "T2b" defined at pin.adb:7, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pin__from_string__L_1__T2b___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+
+end
+(* Module for declaring a program function (and possibly an axiom) for "from_string" defined at pin.ads:5, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Pin__from_string___axiom
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        Standard__character as Standard__character
+ use        Standard__character__rep as Standard__character__rep
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Standard__string as Standard__string
+ use        Standard__string___axiom as Standard__string___axiom
+ use        Pin__from_string as Pin__from_string
+ use        Pin__pin___axiom as Pin__pin___axiom
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+
+ val from_string 
+   (s : Standard__string.string) : int
+  requires {  ( ( [@GP_Pretty_Ada:2507] ((Standard__string.length s) = (4 : int)) ) /\ (forall i   [@model_trace:2510] [@name:I]  : int.
+   ( ( ((Standard__string.first s) <= i) /\ (i <= (Standard__string.last s)) ) -> ( ( [@GP_Pretty_Ada:2524] ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (Standard__string.to_array s) i)) >= (48 : int)) ) /\ ( [@GP_Pretty_Ada:2530] ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (Standard__string.to_array s) i)) <= (57 : int)) ) ) )) ) }
+  ensures {  ( ( (result = (Pin__from_string.from_string s)) /\ (Pin__from_string.from_string__function_guard result s) )/\(Pin__pin___axiom.dynamic_invariant result True False True True) ) }
+ 
+ axiom from_string__post_axiom :
+  (forall s   : Standard__string.string [(Pin__from_string.from_string s)].
+   ( ( (Standard__string___axiom.dynamic_invariant s True True True True) /\ ( ( [@GP_Pretty_Ada:2507] ((Standard__string.length s) = (4 : int)) ) /\ (forall i   [@model_trace:2510] [@name:I]  : int.
+    ( ( ((Standard__string.first s) <= i) /\ (i <= (Standard__string.last s)) ) -> ( ( [@GP_Pretty_Ada:2524] ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (Standard__string.to_array s) i)) >= (48 : int)) ) /\ ( [@GP_Pretty_Ada:2530] ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (Standard__string.to_array s) i)) <= (57 : int)) ) ) )) ) ) -> (let result = (Pin__from_string.from_string s) in (
+    (if ((Pin__from_string.from_string__function_guard result s)) then (
+     ( ( true /\ (Pin__pin___axiom.dynamic_invariant result True False True True) )/\true )) else true)))
+    ))
+
+end
+
+(* Module for checking absence of run-time errors and package initial condition on package elaboration of "pin" defined at pin.ads:1, created in Gnat2Why.Subprograms.Generate_VCs_For_Package_Elaboration *)
+module Pin__package_def
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ let def [#"pin.ads" 1 0 0][@GP_Subp:pin.ads:1] 
+   (__void_param : unit)
+  requires { [#"pin.ads" 1 0 0] true }
+   = [@vc:divergent]
+  ( ();
+  ([#"pin.ads" 1 0 0] ());
+  ([#"pin.ads" 3 0 0] ());
+  ([#"pin.ads" 5 0 0] ());
+  ([#"pin.ads" 6 0 0] ());
+  ();
+  ([#"pin.ads" 11 0 0] ());
+  ([#"pin.ads" 11 0 0] ());
+  ([#"pin.ads" 11 0 0] ());
+  ([#"pin.ads" 11 0 0] ());
+  ();
+  ([#"pin.adb" 1 0 0] ());
+  ([#"pin.adb" 3 0 0] ());
+  ();
+  ( [@GP_Sloc:pin.adb:23:1] ([#"pin.adb" 23 0 0] ()) ) )
+end
+
+(* Module for checking DIC of default value and absence of runtime errors in the private part of "pin" defined at pin.ads:3, created in Gnat2Why.Types.Generate_VCs_For_Type *)
+module Pin__pin__default_checks
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+
+ let def [@GP_Subp:pin.ads:3] 
+   (__void_param : unit)
+  requires {  true }
+  ensures {  true }
+   = [@vc:divergent]
+  ()
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "from_string" defined at pin.ads:5, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Pin__from_string__subprogram_def
+ use        "_gnatprove_standard".Main
+ use        "int".Int
+ use        "int".Int
+ use        "_gnatprove_standard".Int_Power as Int_Power
+ use        "_gnatprove_standard".Boolean as Boolean
+ use        Standard__integer as Standard__integer
+ use        Standard__natural as Standard__natural
+ use        Standard__natural___axiom as Standard__natural___axiom
+ use        Standard__character as Standard__character
+ use        Standard__character___axiom as Standard__character___axiom
+ use        Standard__character__rep as Standard__character__rep
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Standard__string as Standard__string
+ use        Standard__string___axiom as Standard__string___axiom
+ use        Pin__from_string__s as Pin__from_string__s
+ use        Pin__from_string__result as Pin__from_string__result
+ use        Pin__from_string__count as Pin__from_string__count
+ use        Pin__from_string__L_1__i as Pin__from_string__L_1__i
+ use        Pin__from_string__B_2__ch as Pin__from_string__B_2__ch
+ use        Pin__pin as Pin__pin
+ use        Pin__from_string__L_1 as Pin__from_string__L_1
+ use        Pin__from_string__L_1__T2b as Pin__from_string__L_1__T2b
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Array__Int__Standard__character as Array__Int__Standard__character
+ use        Standard__natural___axiom as Standard__natural___axiom
+ use        Standard__positive___axiom as Standard__positive___axiom
+ use        Standard__character___axiom as Standard__character___axiom
+ use        Standard__string___axiom as Standard__string___axiom
+ use        Standard__integer___axiom as Standard__integer___axiom
+ use        Pin__from_string__result___axiom as Pin__from_string__result___axiom
+ use        Pin__from_string__count___axiom as Pin__from_string__count___axiom
+ use        Pin__from_string__L_1__i___axiom as Pin__from_string__L_1__i___axiom
+ use        Pin__from_string__B_2__ch___axiom as Pin__from_string__B_2__ch___axiom
+ use        Pin__from_string__L_1___axiom as Pin__from_string__L_1___axiom
+ use        Pin__from_string__s___axiom as Pin__from_string__s___axiom
+ use        Pin__pin___axiom as Pin__pin___axiom
+ use        Pin__from_string__L_1__T2b___axiom as Pin__from_string__L_1__T2b___axiom
+
+ val pin__from_string__result [@name:From_String] [@model_projected] [@model_trace:2480@result]  : int__ref 
+ 
+ let def [#"pin.ads" 5 0 0][@GP_Subp:pin.ads:5] 
+   (__void_param : unit)
+  requires { [#"pin.ads" 5 0 0] true }
+   = [@vc:divergent]
+  ( () (* Assume dynamic invariants of inputs of the subprogram pin.ads:5 *)
+  ;
+  [#"pin.ads" 5 0 0] assume { [#"pin.ads" 5 0 0] (Standard__string___axiom.dynamic_invariant Pin__from_string__s.s True False True True) };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pin.ads:5 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram pin.ads:5 *)
+  ;
+  [#"pin.ads" 5 0 0] begin ensures {true} let _ = (let _ = (Boolean.andb((( [#"pin.ads" 5 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__s.s in (
+   ()))
+   in () end ;
+  (Standard__string.length(Pin__from_string__s.s)) ) = (4 : int))) (( (let i = [#"pin.ads" 5 0 0] (val _f : int
+  in _f) in (
+   (if ((Boolean.andb((( [#"pin.ads" 5 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__s.s in (
+    ()))
+    in () end ;
+   (Standard__string.first(Pin__from_string__s.s)) ) <= i)) ((i <= ( [#"pin.ads" 5 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__s.s in (
+    ()))
+    in () end ;
+   (Standard__string.last(Pin__from_string__s.s)) ))))) then (
+    [#"pin.ads" 5 0 0] begin ensures {true} let _ = (let _ = (Boolean.andb(((Standard__character__rep.to_rep((Array__Int__Standard__character.get((Standard__string.to_array(Pin__from_string__s.s))) (( [#"pin.ads" 5 0 0] assert { [#"pin.ads" 5 0 0] ([#"pin.ads" 7 0 0] ( [@GP_Sloc:pin.ads:7:43] [@GP_Shape:pragargs__and__forall__and__cmp__ixdcomp] [@vc:annotation] [@GP_Reason:VC_INDEX_CHECK] [@comment:               (for all I in S'Range => S(I) >= '0' and S(I) <= '9'));                                           ^ pin.ads:7:43:VC_INDEX_CHECK] [@GP_Id:9] ( ((Standard__string.first Pin__from_string__s.s) <= i) /\ (i <= (Standard__string.last Pin__from_string__s.s)) ) )) };
+    i ))))) >= (48 : int))) (((Standard__character__rep.to_rep((Array__Int__Standard__character.get((Standard__string.to_array(Pin__from_string__s.s))) ((  assert {  ([#"pin.ads" 7 0 0] ( [@GP_Id:10] [@GP_Sloc:pin.ads:7:59] [@comment:               (for all I in S'Range => S(I) >= '0' and S(I) <= '9'));                                                           ^ pin.ads:7:59:VC_INDEX_CHECK] [@GP_Shape:pragargs__and__forall__and__cmp__ixdcomp] [@vc:annotation] [@GP_Reason:VC_INDEX_CHECK] ( ((Standard__string.first Pin__from_string__s.s) <= i) /\ (i <= (Standard__string.last Pin__from_string__s.s)) ) )) };
+    i ))))) <= (57 : int)))) in (
+     ()))
+     in () end ))))
+  ;
+   (val _f : bool
+  ensures { ( (result = True) <-> (forall i   [@model_trace:2510] [@name:I]  : int.
+   ( ( ((Standard__string.first Pin__from_string__s.s) <= i) /\ (i <= (Standard__string.last Pin__from_string__s.s)) ) -> ( ( [@GP_Pretty_Ada:2524] ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (Standard__string.to_array Pin__from_string__s.s) i)) >= (48 : int)) ) /\ ( [@GP_Pretty_Ada:2530] ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (Standard__string.to_array Pin__from_string__s.s) i)) <= (57 : int)) ) ) )) )} 
+  in _f) ))) in (
+   ()))
+   in () end ;
+  () (* Assume Pre of the subprogram pin.ads:5 *)
+  ;
+   assume {  ( ( [@GP_Pretty_Ada:2507] ((Standard__string.length Pin__from_string__s.s) = (4 : int)) ) /\ (forall i   [@model_trace:2510] [@name:I]  : int.
+   ( ( ((Standard__string.first Pin__from_string__s.s) <= i) /\ (i <= (Standard__string.last Pin__from_string__s.s)) ) -> ( ( [@GP_Pretty_Ada:2524] ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (Standard__string.to_array Pin__from_string__s.s) i)) >= (48 : int)) ) /\ ( [@GP_Pretty_Ada:2530] ((Standard__character__rep.to_rep (Array__Int__Standard__character.get (Standard__string.to_array Pin__from_string__s.s) i)) <= (57 : int)) ) ) )) ) };
+   try
+   ( ();
+   ([#"pin.adb" 3 0 0] ());
+   ([#"pin.adb" 4 0 0] ( [#"pin.adb" 4 0 0] (Pin__from_string__result.result__.int__content <- ( (0 : int) ));
+   [#"pin.adb" 4 0 0] assume { [#"pin.adb" 4 0 0] (Standard__natural___axiom.dynamic_invariant Pin__from_string__result.result__.int__content True False True True) } ));
+   ([#"pin.adb" 5 0 0] ( [#"pin.adb" 5 0 0] (Pin__from_string__count.count.int__content <- ( (0 : int) ));
+   [#"pin.adb" 5 0 0] assume { [#"pin.adb" 5 0 0] (Standard__natural___axiom.dynamic_invariant Pin__from_string__count.count.int__content True False True True) } ));
+   ([#"pin.adb" 8 0 0] ());
+   ([#"pin.adb" 7 0 0] ());
+   ();
+   ( [@GP_Sloc:pin.adb:7:24] ([#"pin.adb" 7 0 0] (let temp___174 [@mlw:proxy_symbol] [@introduced] = ( [#"pin.adb" 7 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__s.s in (
+    ()))
+    in () end ;
+   (Standard__string.first(Pin__from_string__s.s)) ) in (
+   (let temp___175 [@mlw:proxy_symbol] [@introduced] = ( [#"pin.adb" 7 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__s.s in (
+    ()))
+    in () end ;
+   (Standard__string.last(Pin__from_string__s.s)) ) in (
+    ( [#"pin.adb" 7 0 0] (Pin__from_string__L_1__i.i.int__content <- ( temp___174 ));
+    () (* Translation of an Ada loop from pin.adb:7 *)
+    ;
+    (if ((Boolean.andb((temp___174 <= Pin__from_string__L_1__i.i.int__content)) ((Pin__from_string__L_1__i.i.int__content <= temp___175)))) then (
+     [#"pin.adb" 7 0 0] try
+      ( [#"pin.adb" 7 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__result.result__.int__content in (
+       ()))
+       in () end ;
+      (let temp___179 [@mlw:proxy_symbol] [@introduced] = [#"pin.adb" 7 0 0] (val _f : int
+      ensures {[#"pin.adb" 7 0 0] (result = Pin__from_string__result.result__.int__content)} 
+      in _f) in (
+       ( [#"pin.adb" 7 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__B_2__ch.ch.int__content in (
+        ()))
+        in () end ;
+       (let temp___178 [@mlw:proxy_symbol] [@introduced] = [#"pin.adb" 7 0 0] (val _f : int
+       ensures {[#"pin.adb" 7 0 0] (result = Pin__from_string__B_2__ch.ch.int__content)} 
+       in _f) in (
+        ( [#"pin.adb" 7 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__L_1__i.i.int__content in (
+         ()))
+         in () end ;
+        (let temp___177 [@mlw:proxy_symbol] [@introduced] = [#"pin.adb" 7 0 0] (val _f : int
+        ensures {[#"pin.adb" 7 0 0] (result = Pin__from_string__L_1__i.i.int__content)} 
+        in _f) in (
+         ( [#"pin.adb" 7 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__count.count.int__content in (
+          ()))
+          in () end ;
+         (let temp___176 [@mlw:proxy_symbol] [@introduced] = [#"pin.adb" 7 0 0] (val _f : int
+         ensures {[#"pin.adb" 7 0 0] (result = Pin__from_string__count.count.int__content)} 
+         in _f) in (
+          ( () (* First unroling of the loop statements appearing before the loop invariant of loop pin.adb:7 *)
+          ;
+          ();
+          ( [@GP_Sloc:pin.adb:9:13] ([#"pin.adb" 9 0 0] ([#"pin.adb" 9 0 0] ( [#"pin.adb" 9 0 0] (Pin__from_string__B_2__ch.ch.int__content <- ( (Standard__character__rep.to_rep((Array__Int__Standard__character.get((Standard__string.to_array(Pin__from_string__s.s))) (Pin__from_string__L_1__i.i.int__content)))) ));
+          [#"pin.adb" 9 0 0] assume { [#"pin.adb" 9 0 0] (Standard__character___axiom.dynamic_invariant Pin__from_string__B_2__ch.ch.int__content True False True True) } ))) );
+          () (* While loop translating the Ada loop from pin.adb:7 *)
+          ;
+          (let temp___inv_180 [@mlw:proxy_symbol] [@introduced] = (Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Pin__from_string__B_2__ch.ch.int__content >= (48 : int))) ((Pin__from_string__B_2__ch.ch.int__content <= (57 : int))))) ((Pin__from_string__count.count.int__content = ([#"pin.adb" 12 0 0] ( [@vc:annotation] [@comment:            pragma Loop_Invariant (Ch >= '0' and Ch <= '9' and Count = I-S'First and Count <= 4 and  Result < 10 ** Count);                                                                         ^ pin.adb:12:73:VC_OVERFLOW_CHECK] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Shape:L_1_while__B_2_declblk__pragargs__and__and__and__cmp__sub] [@GP_Sloc:pin.adb:12:73] [@GP_Id:5] (Standard__integer.range_check_((Pin__from_string__L_1__i.i.int__content - ( [#"pin.adb" 12 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__s.s in (
+           ()))
+           in () end ;
+          (Standard__string.first(Pin__from_string__s.s)) )))) )))))) ((Pin__from_string__count.count.int__content <= (4 : int))))) ((Pin__from_string__result.result__.int__content < ([#"pin.adb" 12 0 0] ( [@GP_Shape:L_1_while__B_2_declblk__pragargs__and__cmp__exp] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Sloc:pin.adb:12:114] [@comment:            pragma Loop_Invariant (Ch >= '0' and Ch <= '9' and Count = I-S'First and Count <= 4 and  Result < 10 ** Count);                                                                                                                  ^ pin.adb:12:114:VC_OVERFLOW_CHECK] [@GP_Id:6] (Standard__integer.range_check_((let temp___181 [@mlw:proxy_symbol] [@introduced] = (10 : int) in (
+           (Int_Power.power(temp___181) (Pin__from_string__count.count.int__content))))
+          )) ))))) in (
+            begin ensures {true} let _ = (let _ = () in (
+            ()))
+            in () end ))
+          ;
+           while True do
+           invariant { 
+            ([#"pin.adb" 12 0 0] ( [@GP_Reason:VC_LOOP_INVARIANT] [@comment:            pragma Loop_Invariant (Ch >= '0' and Ch <= '9' and Count = I-S'First and Count <= 4 and  Result < 10 ** Count);                                    ^ pin.adb:12:36:VC_LOOP_INVARIANT] [@vc:annotation] [@GP_Shape:L_1_while__B_2_declblk__pragargs__and] [@GP_Sloc:pin.adb:12:36] [@GP_Id:7] ( ( ( ( ( [@GP_Pretty_Ada:2382] [@GP_Sloc:pin.adb:12:36] (Pin__from_string__B_2__ch.ch.int__content >= (48 : int)) ) /\ ( [@GP_Sloc:pin.adb:12:50] [@GP_Pretty_Ada:2386] (Pin__from_string__B_2__ch.ch.int__content <= (57 : int)) ) ) /\ ( [@GP_Pretty_Ada:2390] [@GP_Sloc:pin.adb:12:64] (Pin__from_string__count.count.int__content = (Pin__from_string__L_1__i.i.int__content - (Standard__string.first Pin__from_string__s.s))) ) ) /\ ( [@GP_Sloc:pin.adb:12:86] [@GP_Pretty_Ada:2398] (Pin__from_string__count.count.int__content <= (4 : int)) ) ) /\ ( [@GP_Pretty_Ada:2402] [@GP_Sloc:pin.adb:12:102] (Pin__from_string__result.result__.int__content < (let temp___182 [@mlw:proxy_symbol] [@introduced] = (10 : int) in (
+             (Int_Power.power temp___182 Pin__from_string__count.count.int__content)))
+            ) ) ) ))
+            }
+           ( () (* Assume implicit invariants from the loop pin.adb:7 *)
+           ;
+            assume {  (Boolean.andb(( ( ( ( ( ( ( ( true /\ (Standard__natural___axiom.dynamic_invariant Pin__from_string__count.count.int__content True True True True) )/\true ) /\ (if (( True \/ ((Standard__string.first Pin__from_string__s.s) <= (Standard__string.last Pin__from_string__s.s)) )) then (
+            (Pin__from_string__L_1__T2b.dynamic_property (Standard__string.first Pin__from_string__s.s) (Standard__string.last Pin__from_string__s.s) Pin__from_string__L_1__i.i.int__content)) else true) )/\true ) /\ (Standard__character___axiom.dynamic_invariant Pin__from_string__B_2__ch.ch.int__content True True True True) )/\true ) /\ (Standard__natural___axiom.dynamic_invariant Pin__from_string__result.result__.int__content True True True True) )/\true )) (( ((Standard__string.first Pin__from_string__s.s) <= Pin__from_string__L_1__i.i.int__content) /\ (Pin__from_string__L_1__i.i.int__content <= (Standard__string.last Pin__from_string__s.s)) ))) };
+           () (* Check for absence of RTE in the invariant of loop pin.adb:7 *)
+           ;
+           () (* Loop statements appearing after the loop invariant of loop pin.adb:7 *)
+           ;
+           ();
+           ( [@GP_Sloc:pin.adb:13:13] ([#"pin.adb" 13 0 0] ()) );
+           ( [@GP_Sloc:pin.adb:13:22] ([#"pin.adb" 13 0 0] ()) );
+           ( [@GP_Sloc:pin.adb:13:19] ([#"pin.adb" 13 0 0] [#"pin.adb" 13 0 0] (Pin__from_string__count.count.int__content <- ( ([#"pin.adb" 13 0 0] ( [@GP_Shape:L_1_while__B_2_declblk__count_assign__add] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Sloc:pin.adb:13:28] [@GP_Id:0] [@comment:            Count := Count + 1;                            ^ pin.adb:13:28:VC_OVERFLOW_CHECK] (Standard__integer.range_check_((Pin__from_string__count.count.int__content + (1 : int)))) )) ))) );
+           ( [@GP_Sloc:pin.adb:14:13] ([#"pin.adb" 14 0 0] ()) );
+           ( [@GP_Sloc:pin.adb:14:23] ([#"pin.adb" 14 0 0] ()) );
+           ( [@GP_Sloc:pin.adb:14:20] ([#"pin.adb" 14 0 0] [#"pin.adb" 14 0 0] (Pin__from_string__result.result__.int__content <- ( ([#"pin.adb" 14 0 0] ( [@vc:annotation] [@comment:            Result := Result * 10;                              ^ pin.adb:14:30:VC_RANGE_CHECK] [@GP_Shape:L_1_while__B_2_declblk__result_assign__mult] [@GP_Reason:VC_RANGE_CHECK] [@GP_Sloc:pin.adb:14:30] [@GP_Id:2] (Standard__natural.range_check_(([#"pin.adb" 14 0 0] ( [@comment:            Result := Result * 10;                              ^ pin.adb:14:30:VC_OVERFLOW_CHECK] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Shape:L_1_while__B_2_declblk__result_assign__mult] [@GP_Sloc:pin.adb:14:30] [@GP_Id:1] (Standard__integer.range_check_((Pin__from_string__result.result__.int__content * (10 : int)))) )))) )) ))) );
+           ( [@GP_Sloc:pin.adb:15:13] ([#"pin.adb" 15 0 0] ()) );
+           ( [@GP_Sloc:pin.adb:15:23] ([#"pin.adb" 15 0 0] ()) );
+           ( [@GP_Sloc:pin.adb:15:47] ([#"pin.adb" 15 0 0] ()) );
+           ( [@GP_Sloc:pin.adb:15:20] ([#"pin.adb" 15 0 0] [#"pin.adb" 15 0 0] (Pin__from_string__result.result__.int__content <- ( ([#"pin.adb" 15 0 0] ( [@vc:annotation] [@GP_Shape:L_1_while__B_2_declblk__result_assign__add] [@comment:            Result := Result + (Character'Pos(Ch) - Character'Pos('0'));                              ^ pin.adb:15:30:VC_RANGE_CHECK] [@GP_Reason:VC_RANGE_CHECK] [@GP_Id:4] [@GP_Sloc:pin.adb:15:30] (Standard__natural.range_check_(([#"pin.adb" 15 0 0] ( [@vc:annotation] [@comment:            Result := Result + (Character'Pos(Ch) - Character'Pos('0'));                              ^ pin.adb:15:30:VC_OVERFLOW_CHECK] [@GP_Shape:L_1_while__B_2_declblk__result_assign__add] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Id:3] [@GP_Sloc:pin.adb:15:30] (Standard__integer.range_check_((Pin__from_string__result.result__.int__content + (Pin__from_string__B_2__ch.ch.int__content - (48 : int))))) )))) )) ))) );
+           () (* Check for the exit condition and loop statements appearing before the loop invariant of loop pin.adb:7 *)
+           ;
+           (if ((Pin__from_string__L_1__i.i.int__content = temp___175)) then (
+             raise Pin__from_string__L_1.L_1));
+           ([#"pin.adb" 7 0 0] [#"pin.adb" 7 0 0] (Pin__from_string__L_1__i.i.int__content <- ( (Pin__from_string__L_1__i.i.int__content + (1 : int)) )));
+           ();
+           ( [@GP_Sloc:pin.adb:9:13] ([#"pin.adb" 9 0 0] ([#"pin.adb" 9 0 0] ( [#"pin.adb" 9 0 0] (Pin__from_string__B_2__ch.ch.int__content <- ( (Standard__character__rep.to_rep((Array__Int__Standard__character.get((Standard__string.to_array(Pin__from_string__s.s))) (Pin__from_string__L_1__i.i.int__content)))) ));
+           [#"pin.adb" 9 0 0] assume { [#"pin.adb" 9 0 0] (Standard__character___axiom.dynamic_invariant Pin__from_string__B_2__ch.ch.int__content True False True True) } ))) );
+           (let temp___inv_180 [@mlw:proxy_symbol] [@introduced] = (Boolean.andb((Boolean.andb((Boolean.andb((Boolean.andb((Pin__from_string__B_2__ch.ch.int__content >= (48 : int))) ((Pin__from_string__B_2__ch.ch.int__content <= (57 : int))))) ((Pin__from_string__count.count.int__content = ([#"pin.adb" 12 0 0] ( [@vc:annotation] [@comment:            pragma Loop_Invariant (Ch >= '0' and Ch <= '9' and Count = I-S'First and Count <= 4 and  Result < 10 ** Count);                                                                         ^ pin.adb:12:73:VC_OVERFLOW_CHECK] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Shape:L_1_while__B_2_declblk__pragargs__and__and__and__cmp__sub] [@GP_Sloc:pin.adb:12:73] [@GP_Id:5] (Standard__integer.range_check_((Pin__from_string__L_1__i.i.int__content - ( [#"pin.adb" 12 0 0] begin ensures {true} let _ = (let _ = Pin__from_string__s.s in (
+            ()))
+            in () end ;
+           (Standard__string.first(Pin__from_string__s.s)) )))) )))))) ((Pin__from_string__count.count.int__content <= (4 : int))))) ((Pin__from_string__result.result__.int__content < ([#"pin.adb" 12 0 0] ( [@GP_Shape:L_1_while__B_2_declblk__pragargs__and__cmp__exp] [@vc:annotation] [@GP_Reason:VC_OVERFLOW_CHECK] [@GP_Sloc:pin.adb:12:114] [@comment:            pragma Loop_Invariant (Ch >= '0' and Ch <= '9' and Count = I-S'First and Count <= 4 and  Result < 10 ** Count);                                                                                                                  ^ pin.adb:12:114:VC_OVERFLOW_CHECK] [@GP_Id:6] (Standard__integer.range_check_((let temp___181 [@mlw:proxy_symbol] [@introduced] = (10 : int) in (
+            (Int_Power.power(temp___181) (Pin__from_string__count.count.int__content))))
+           )) ))))) in (
+             begin ensures {true} let _ = (let _ = () in (
+             ()))
+             in () end ))
+            )
+          done )))
+          )))
+         )))
+        )))
+       )
+     with
+      Pin__from_string__L_1.L_1 -> ()
+     end)) )))
+   ))
+   ) );
+   ( [@GP_Sloc:pin.adb:18:18] ([#"pin.adb" 18 0 0] ()) );
+   ( [@GP_Sloc:pin.adb:18:7] ([#"pin.adb" 18 0 0] ( [#"pin.adb" 18 0 0] (pin__from_string__result.int__content <- ( ([#"pin.adb" 18 0 0] ( [@comment:      return PIN(Result);                  ^ pin.adb:18:18:VC_RANGE_CHECK] [@GP_Shape:return__typeconv] [@vc:annotation] [@GP_Reason:VC_RANGE_CHECK] [@GP_Sloc:pin.adb:18:18] [@GP_Id:8] (Pin__pin.range_check_(Pin__from_string__result.result__.int__content)) )) ));
+    raise Return__exc )) );
+    raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+   begin ensures {true} let _ = (let _ = True in (
+   ()))
+   in () end ;
+  pin__from_string__result.int__content )
+end

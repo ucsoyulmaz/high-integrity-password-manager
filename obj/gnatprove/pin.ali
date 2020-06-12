@@ -1,0 +1,42 @@
+V "GNAT Lib v2019"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U pin%b			pin.adb			0c5e1d96 OO PK IU
+
+U pin%s			pin.ads			553c8633 OO PK IU
+
+D pin.ads		20200605092453 553c8633 pin%s
+D pin.adb		20200605092453 59629ba5 pin%b
+D system.ads		20190518041255 085b6ffb system%s
+G a Z
+X 1 pin.ads
+1K9*PIN 13l5 13e8 2|1b14 23l5 23t8
+3I9*PIN<integer> 5r47 11c9 2|3r47 18r14
+5V13*From_String{3I9} 5>25 2|3b13 19l8 19t19
+5a25 S{string} 6r14 7r30 7r41 7r57 2|3b25 7r16 9r31 12r74
+7i25 I{integer} 7r43 7r59
+X 2 pin.adb
+4i7 Result{natural} 12r102 14m13 14r23 15m13 15r23 18r18
+5i7 Count{natural} 12r64 12r86 12r117 13m13 13r22
+7i11 I{integer} 9r33 12r72
+9e13 Ch{character} 12r36 12r50 15r47
+
+QQ SPARKVERSION 2019 (20190517)
+GG EK_DIRECT_CALLS pin__from_string 0
+GG EK_GLOBALS pin__from_string local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS pin 0
+GG EK_GLOBALS pin local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE pin TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE pin__from_string FALSE FALSE FALSE FALSE TRUE pin VISIBLE_PART
+GG EK_END_MARKER

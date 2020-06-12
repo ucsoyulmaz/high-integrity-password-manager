@@ -1,0 +1,41 @@
+{
+  "spark": [
+    {
+      "name": "NumericController.Is_Numeric",
+      "sloc": [
+        {
+          "file": "numericcontroller.ads",
+          "line": 2
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "NumericController.Is_Digit",
+      "sloc": [
+        {
+          "file": "numericcontroller.ads",
+          "line": 3
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 9.76999988779426E-04,
+    "globals (basic)": 4.17499989271164E-03,
+    "globals/properties (advanced)": 5.58800017461181E-03,
+    "flow analysis": 6.07000023592263E-04,
+    "codepeer results": 7.00000009601354E-06,
+    "init_why_sections": 5.49999997019768E-04,
+    "translation of standard": 3.14699998125434E-03,
+    "translation of compilation unit": 5.11999987065792E-03,
+    "proof": 1.99999999495049E-06
+  }
+}

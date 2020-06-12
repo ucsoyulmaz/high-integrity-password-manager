@@ -1,0 +1,58 @@
+V "GNAT Lib v2019"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U mycommandline%b	mycommandline.adb	8ba6725a OO PK
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+
+U mycommandline%s	mycommandline.ads	dbf720e9 OO PK
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-comlin.ads		20190518041255 4aa66568 ada.command_line%s
+D mycommandline.ads	20200605092453 dbf720e9 mycommandline%s
+D mycommandline.adb	20200605092453 1af737db mycommandline%b
+D system.ads		20190518041255 085b6ffb system%s
+G a Z
+X 1 ada.ads
+16K9*Ada 20e8 4|1r6 9r14 14r14 19r14
+X 2 a-comlin.ads
+36K13*Command_Line 144e21 4|1w10 9r18 14r18 19r18
+39V13*Argument_Count{natural} 4|14s31
+52V13*Argument{string} 4|19s31
+62V13*Command_Name{string} 4|9s31
+X 3 mycommandline.ads
+1K9*MyCommandLine 10l5 10e18 4|3b14 24l5 24t18
+3V13*Argument_Count{natural} 8s23 4|12b13 15l8 15t22
+5V13*Command_Name{string} 4|7b13 10l8 10t20
+7V13*Argument{string} 7>22 4|17b13 20l8 20t16
+7i22 Number{positive} 8r13 4|17b22 19r40
+
+QQ SPARKVERSION 2019 (20190517)
+GG EK_DIRECT_CALLS mycommandline__argument_count 0
+GG EK_GLOBALS mycommandline__argument_count local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 ada__command_line__argument_count FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS mycommandline__command_name 0
+GG EK_GLOBALS mycommandline__command_name local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 ada__command_line__command_name FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS mycommandline__argument 1 mycommandline__argument_count
+GG EK_GLOBALS mycommandline__argument local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 2 ada__command_line__argument_count ada__command_line__argument FALSE TRUE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS mycommandline 0
+GG EK_GLOBALS mycommandline local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE ada__command_line__argument FALSE FALSE FALSE FALSE TRUE ada__command_line VISIBLE_PART
+GG EK_FLOW_SCOPE ada TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE mycommandline__argument_count FALSE FALSE FALSE FALSE TRUE mycommandline VISIBLE_PART
+GG EK_FLOW_SCOPE ada__command_line__set_exit_status FALSE FALSE FALSE FALSE TRUE ada__command_line VISIBLE_PART
+GG EK_FLOW_SCOPE mycommandline__command_name FALSE FALSE FALSE FALSE TRUE mycommandline VISIBLE_PART
+GG EK_FLOW_SCOPE ada__command_line__command_name FALSE FALSE FALSE FALSE TRUE ada__command_line VISIBLE_PART
+GG EK_FLOW_SCOPE mycommandline__argument FALSE FALSE FALSE FALSE TRUE mycommandline VISIBLE_PART
+GG EK_FLOW_SCOPE ada__command_line TRUE FALSE FALSE FALSE FALSE ada
+GG EK_FLOW_SCOPE ada__command_line__argument_count FALSE FALSE FALSE FALSE TRUE ada__command_line VISIBLE_PART
+GG EK_FLOW_SCOPE mycommandline TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_END_MARKER

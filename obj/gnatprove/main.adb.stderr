@@ -1,0 +1,1 @@
+main.adb:256:33: medium: precondition might fail, cannot prove PasswordDatabase.Length(DB) < PasswordDatabase.Max_Entries or ( ( if if U1'Length > 0 then U1'First <= U1'Last and U1'Length <= 1024 else true then (PasswordDatabase.has_password_for (DB, ...)) else ...))[#0]

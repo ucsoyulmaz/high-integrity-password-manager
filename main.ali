@@ -1,0 +1,202 @@
+V "GNAT Lib v2019"
+M P W=b
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV SPARK_05
+
+U main%b		main.adb		81b77972 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z interfaces%s		interfac.ads		interfac.ali
+W mycommandline%s	mycommandline.adb	mycommandline.ali
+W mystring%s		mystring.adb		mystring.ali
+W mystringtokeniser%s	mystringtokeniser.adb	mystringtokeniser.ali
+W passworddatabase%s	passworddatabase.adb	passworddatabase.ali
+W passwordmanager%s	passwordmanager.adb	passwordmanager.ali
+W pin%s			pin.adb			pin.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-charac.ads		20190518041255 2d3ec45b ada.characters%s
+D a-chlat1.ads		20190518041255 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20190518041254 61e5e089 ada.containers%s
+D a-cforma.ads		20190518041254 4dc2c126 ada.containers.formal_ordered_maps%s
+D a-cofuba.ads		20190518041254 24945d4e ada.containers.functional_base%s
+D a-cofuma.ads		20190518041256 61667f51 ada.containers.functional_maps%s
+D a-cofuma.adb		20190518041254 8c0e325d ada.containers.functional_maps%b
+D a-cofuve.ads		20190518041256 0334cb05 ada.containers.functional_vectors%s
+D a-cofuve.adb		20190518041256 5633ee38 ada.containers.functional_vectors%b
+D a-conhel.ads		20190518041254 20298884 ada.containers.helpers%s
+D a-crbltr.ads		20190518041255 c3e90a86 ada.containers.red_black_trees%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-inteio.ads		20190518041256 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-string.ads		20190518041255 90ac6797 ada.strings%s
+D a-strmap.ads		20190518041255 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20190518041255 1656705b ada.strings.unbounded%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-tiinio.ads		20190518041254 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D main.adb		20200605115832 b430c979 main%b
+D mycommandline.ads	20200605092453 dbf720e9 mycommandline%s
+D mystring.ads		20200605092453 ce083c8f mystring%s
+D mystring.adb		20200605092453 8198c1c4 mystring%b
+D mystringtokeniser.ads	20200605092453 9bc8f6ad mystringtokeniser%s
+D passworddatabase.ads	20200605092453 cec19903 passworddatabase%s
+D passwordmanager.ads	20200605115832 0f4189eb passwordmanager%s
+D passwordmanager.adb	20200605115832 077252e8 passwordmanager%b
+D pin.ads		20200605092453 553c8633 pin%s
+D system.ads		20190518041255 085b6ffb system%s
+D s-atocou.ads		20190518041256 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041254 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [main standard 82 11 none]
+G r i none [main standard 82 11 none] [mystring standard 5 9 none]
+G r s database [main standard 82 11 none] [databaseIP passworddatabase 56 9 none]
+G r i none [main standard 82 11 none] [passwordmanager standard 7 9 none]
+G r c none [main standard 82 11 none] [argument_count mycommandline 3 13 none]
+G r c none [main standard 82 11 none] [argument mycommandline 7 13 none]
+G r c none [main standard 82 11 none] [from_string pin 5 13 none]
+G r c none [main standard 82 11 none] [init passworddatabase 20 14 none]
+G r c none [main standard 82 11 none] [tokenise mystringtokeniser 70 14 none]
+G r c none [main standard 82 11 none] [from_string passworddatabase 35 13 none]
+G r c none [main standard 82 11 none] [has_password_for passworddatabase 22 13 none]
+G r c none [main standard 82 11 none] [remove passworddatabase 30 14 none]
+G r c none [main standard 82 11 none] [get passworddatabase 24 13 none]
+G r c none [main standard 82 11 none] [to_string passworddatabase 37 13 none]
+G r c none [main standard 82 11 none] [length passworddatabase 45 13 none]
+G r c none [main standard 82 11 none] [from_string passworddatabase 33 13 none]
+G r c none [main standard 82 11 none] [put passworddatabase 27 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 27|77r6 77r33 78r6 78r33 79r6 79r33 80r6 80r33
+X 4 a-contai.ads
+16K13*Containers 24e19 27|80w10 80r37
+20I9*Count_Type<integer>
+X 7 a-cofuma.ads
+320V14 "="=322:48{boolean} 6|43i19
+X 12 a-crbltr.ads
+67R12 Tree_Type
+X 15 a-inteio.ads
+18K13*Integer_Text_IO[23|46] 27|78w10 78r37
+X 18 a-string.ads
+16K13*Strings 35e16 27|79r10 79r37
+X 20 a-strunb.ads
+82K21*Unbounded 756e26 27|79w18 79r45
+X 22 a-textio.ads
+57K13*Text_IO 727e16 27|77w10 77r37
+465U14*Put 27|169s19 307s19
+508U14*Put_Line 27|274s31 383s7
+X 27 main.adb
+82U11*Main 82b11 386l5 386t9
+84K12 Lines[29|5] 88r8 93r19 93r37 139r25 140r25 141r25 157r20 158r20 159r20
+. 170r19 173r22 176r45 179r25 186r25 191r25 199r25 201r25 203r41 231r25 237r27
+. 242r29 245r33 249r32 250r32 257r34 258r34 269r25 271r29 273r66 275r51 285r25
+. 288r29 290r48 308r19 310r22 314r45 317r25 323r25 328r25 335r28 340r41
+85b4 IsUnlocked{boolean} 134m10 168r20 223m28 362m31
+86b4 IsPinAccepted{boolean} 359m28 361r32
+87K12 PM[33|7] 131r10 162r20 162r39 163r20 163r40 222r28 244r30 252r33 252r53
+. 256r31 273r32 275r34 290r28 359r45
+88r4 S{29|6R9[84]} 170m35 173r39 176r59 179r39 187r28 192r28 238r30 308m35
+. 310r39 314r59 317r39 324r28 336r31
+89a4 T{31|10A9} 173m43 173r43 176r25 176r64 177r25 178r25 179r44 180r24 187r31
+. 187r44 187r58 192r31 192r44 192r58 238r33 238r46 238r60 310m43 310r43 314r25
+. 314r64 315r25 316r25 317r44 318r24 324r31 324r44 324r58 329r43 336r34 336r47
+. 336r61
+91i4 NumTokens{natural} 173m46 175r22 200r25 231r65 269r65 285r65 310m46
+. 313r22 329r25
+92a4 InputPinText{string} 109m13 111r22 113r37 131r27 150r32 151r37 153r60
+. 203m25 206r42 207r47 210r49 222r43 340m25 343r42 344r47 347r49 359r64
+93r4 UrlText{29|6R9[84]} 157r37 158r37 159r37 240m25 257r51
+94b4 IsItemInDB{boolean} 243m28 254r33
+102b7 IsPinValid{boolean} 116m22 118m22 123m13 126m10 129r11 213m28 216r29
+. 350m28 353r29
+103b7 IsLoopRunning{boolean} 146r20 225m28 261m31 264m28 279m28 292m28 295m25
+. 299m22 365m28 369m25 373m22
+111i17 I{integer} 113r51
+113e19 Ch{character} 115r38 117r63
+139r13 TokenStr1{29|6R9[84]} 185m22 199r42 231r42 269r42 285r42 322m22 328r42
+140r13 TokenStr2{29|6R9[84]} 190m22 201r42 203r58 240r36 242r46 245r50 249r49
+. 271r46 273r83 275r68 288r46 290r65 334m25 340r58
+141r13 TokenStr3{29|6R9[84]} 236m25 250r49 258r51
+145l13 While_Loop 379l22 379e32
+150i27 I{integer} 151r51 153r74
+206i37 I{integer} 207r61 210r63
+343i37 I{integer} 344r61 347r63
+X 28 mycommandline.ads
+1K9*MyCommandLine 27|72w6 107r11 108r14 109r29 28|10e18
+3V13*Argument_Count{natural} 27|107s25
+7V13*Argument{string} 27|108s28 109s43
+X 29 mystring.ads
+2i4 Max_MyString_Length{positive} 27|84r35
+5k9*MyString 27|73w6 84r25 29|48e13
+6R9 MyString 27|88r14[84] 93r25[84] 139r31[84] 140r31[84] 141r31[84]
+8V13 To_String{string} 27|157s26[84] 158s26[84] 159s26[84] 173s28[84] 199s31[84]
+. 201s31[84] 203s47[84] 231s31[84] 242s35[84] 245s39[84] 249s38[84] 250s38[84]
+. 257s40[84] 258s40[84] 269s31[84] 271s35[84] 273s72[84] 275s57[84] 285s31[84]
+. 288s35[84] 290s54[84] 310s28[84] 328s31[84] 340s47[84]
+12V13 From_String{6R9[27|84]} 27|93s43[84]
+23V13 Length{natural} 27|176s51[84] 179s31[84] 314s51[84] 317s31[84]
+26V13 Substring{6R9[27|84]} 27|186s31[84] 191s31[84] 237s33[84] 323s31[84]
+. 335s34[84]
+33U14 Get_Line 27|170s25[84] 308s25[84]
+X 31 mystringtokeniser.ads
+3K9*MyStringTokeniser 27|74w6 74r33 89r8 172r19 309r19 31|79e22
+6i7*Start{positive} 27|90m18 176r70 179r50 187r37 187r50 192r37 192r50 238r39
+. 238r52 314r70 317r50 324r37 324r50 336r40 336r53
+7i7*Length{natural} 27|90m30 176r31 177r31 178r31 180r30 187r64 192r64 238r66
+. 314r31 315r31 316r31 318r30 324r64 329r49 336r67
+10A9*TokenArray(5R9)<integer> 27|89r26
+70U14*Tokenise 27|172s37 309s37
+X 32 passworddatabase.ads
+7K9*PasswordDatabase 27|71w6 32|85e21
+X 33 passwordmanager.ads
+7k9*PasswordManager 27|76w6 87r22 33|70e20
+16U14 Init_Program 27|131s13[87]
+23V13 Is_Pin_Correct{boolean} 27|359s48[87]
+30U14 Update_Pin 27|222s31[87]
+37U14 Put_Password 27|256s34[87]
+56V13 Get_Password{string} 27|275s37[87]
+60U14 Remove_Password 27|290s31[87]
+63V13 Get_DB_Size{4|20I9} 27|162s42[87] 163s43[87] 252s56[87]
+65V13 Get_DB_Length{4|20I9} 27|162s23[87] 163s23[87] 252s36[87]
+67V13 Is_Website_Registered_Already{boolean} 27|244s33[87] 273s35[87]
+X 35 pin.ads
+1K9*PIN 27|75w6 35|13e8
+

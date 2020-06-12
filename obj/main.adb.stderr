@@ -1,0 +1,22 @@
+main.adb:174:28: no candidate interpretations match the actuals:
+main.adb:174:28: missing argument for parameter "Item" in call to "Put" declared at a-tiinio.ads:97, instance at a-inteio.ads:18
+main.adb:174:28: missing argument for parameter "Item" in call to "Put" declared at a-tiinio.ads:68, instance at a-inteio.ads:18
+main.adb:174:28: missing argument for parameter "Item" in call to "Put" declared at a-textio.ads:459
+main.adb:174:28: missing argument for parameter "Item" in call to "Put" declared at a-textio.ads:386
+main.adb:174:28: possible missing instantiation of Text_IO.Integer_IO
+main.adb:174:34: expected type "Standard.Integer"
+main.adb:174:34: found type "Ada.Containers.Count_Type"
+main.adb:174:34:   ==> in call to "Put" at a-tiinio.ads:80, instance at a-inteio.ads:18
+main.adb:174:34:   ==> in call to "Put" at a-textio.ads:465
+main.adb:174:34:   ==> in call to "Put" at a-textio.ads:392
+main.adb:175:28: no candidate interpretations match the actuals:
+main.adb:175:28: missing argument for parameter "Item" in call to "Put" declared at a-tiinio.ads:97, instance at a-inteio.ads:18
+main.adb:175:28: missing argument for parameter "Item" in call to "Put" declared at a-tiinio.ads:68, instance at a-inteio.ads:18
+main.adb:175:28: missing argument for parameter "Item" in call to "Put" declared at a-textio.ads:459
+main.adb:175:28: missing argument for parameter "Item" in call to "Put" declared at a-textio.ads:386
+main.adb:175:28: possible missing instantiation of Text_IO.Integer_IO
+main.adb:175:34: expected type "Standard.Integer"
+main.adb:175:34: found type "Ada.Containers.Count_Type"
+main.adb:175:34:   ==> in call to "Put" at a-tiinio.ads:80, instance at a-inteio.ads:18
+main.adb:175:34:   ==> in call to "Put" at a-textio.ads:465
+main.adb:175:34:   ==> in call to "Put" at a-textio.ads:392
